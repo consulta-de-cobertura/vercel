@@ -1,7 +1,11 @@
 import React from 'react';
 import { Wifi, PhoneCall, FileX, Clock, Navigation, Shield } from 'lucide-react';
 
-const Benefits = () => {
+interface BenefitsProps {
+  onRedirect: () => void;
+}
+
+const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
   const benefits = [
     {
       icon: <Wifi className="h-10 w-10 text-blue-400" />,
@@ -210,6 +214,17 @@ const Benefits = () => {
               <p className="text-sm md:text-base text-gray-600">{benefit.description}</p>
             </div>
           ))}
+        </div>
+
+        {/* CTA Estratégico após apresentar benefícios */}
+        <div className="text-center mt-8 md:mt-12">
+          <button
+            onClick={onRedirect}
+            className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6"
+          >
+            Quero Esses Benefícios Agora
+          </button>
+          <p className="text-sm text-gray-500 mt-2">✅ Sem consulta ao SPC • ✅ Frete grátis • ✅ Ativação em 24h</p>
         </div>
       </div>
     </section>

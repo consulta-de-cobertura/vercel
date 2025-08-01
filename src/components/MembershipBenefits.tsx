@@ -1,7 +1,11 @@
 import React from 'react';
 import { ShoppingBag, Film, Fuel, Stethoscope, Dumbbell, Building } from 'lucide-react';
 
-const MembershipBenefits = () => {
+interface MembershipBenefitsProps {
+  onRedirect: () => void;
+}
+
+const MembershipBenefits: React.FC<MembershipBenefitsProps> = ({ onRedirect }) => {
   const benefits = [
     {
       image: "https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-30_17-56-07.jpg",
@@ -54,6 +58,17 @@ const MembershipBenefits = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        {/* CTA Estratégico após benefícios exclusivos */}
+        <div className="text-center mt-8 md:mt-12">
+          <button
+            onClick={onRedirect}
+            className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6 mb-3"
+          >
+            Quero Todos Esses Benefícios
+          </button>
+          <p className="text-sm text-gray-500">🎬 Cinema grátis • 💰 Descontos exclusivos • 🏥 Saúde com desconto</p>
         </div>
       </div>
     </section>

@@ -2,7 +2,11 @@ import React from 'react';
 import { Star } from 'lucide-react';
 import AnimatedSection from './AnimatedSection';
 
-const Differentials = () => {
+interface DifferentialsProps {
+  onRedirect: () => void;
+}
+
+const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
   return (
     <section className="py-6 md:py-12 bg-white">
       <div className="container mx-auto px-4">
@@ -236,6 +240,19 @@ const Differentials = () => {
               </div>
             </AnimatedSection>
           </div>
+        </div>
+
+        {/* CTA Estratégico após diferenciais */}
+        <div className="text-center mt-8 md:mt-12">
+          <AnimatedSection animation="slideUp" delay={0.2}>
+            <button
+              onClick={onRedirect}
+              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6 mb-3"
+            >
+              Quero Fazer Parte Dessa Família
+            </button>
+            <p className="text-sm text-gray-500">🏆 Junte-se a mais de 100.000 brasileiros satisfeitos</p>
+          </AnimatedSection>
         </div>
       </div>
     </section>

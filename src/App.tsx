@@ -32,21 +32,21 @@ function App() {
         <Hero onRedirect={handleDirectRedirect} />
         
         {/* 2. BENEFITS - Apresenta a solução imediatamente */}
-        <Benefits />
+        <Benefits onRedirect={handleDirectRedirect} />
         
         {/* 3. DIFFERENTIALS - Explica por que escolher vocês */}
-        <Differentials />
+        <Differentials onRedirect={handleDirectRedirect} />
         
         {/* 4. ABOUT + TRUST - Constrói credibilidade (juntos para maior impacto) */}
         <About />
-        <TrustSection />
+        <TrustSection onRedirect={handleDirectRedirect} />
         
         {/* 5. TESTIMONIALS + WRITTEN - Prova social concentrada (mais impacto) */}
         <Testimonials />
-        <WrittenTestimonials />
+        <WrittenTestimonials onRedirect={handleDirectRedirect} />
         
         {/* 6. MEMBERSHIP BENEFITS - Valor agregado (sweeteners) */}
-        <MembershipBenefits />
+        <MembershipBenefits onRedirect={handleDirectRedirect} />
         
         {/* 7. OBJECTIONS - Remove barreiras finais */}
         <ObjectionsSection onRedirect={handleDirectRedirect} />

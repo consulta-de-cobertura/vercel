@@ -1,7 +1,11 @@
 import React from 'react';
 import { Shield, Award, Building, Clock, Users, CheckCircle } from 'lucide-react';
 
-const TrustSection = () => {
+interface TrustSectionProps {
+  onRedirect: () => void;
+}
+
+const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
   const trustIndicators = [
     {
       icon: <Clock className="h-8 w-8 text-blue-500" />,
@@ -191,6 +195,17 @@ const TrustSection = () => {
                 </div>
               </div>
             </div>
+          </div>
+
+          {/* CTA Estratégico após construir confiança */}
+          <div className="text-center mt-8 md:mt-12">
+            <button
+              onClick={onRedirect}
+              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6 mb-3"
+            >
+              Confio na Federal Associados
+            </button>
+            <p className="text-sm text-gray-500">🛡️ Empresa certificada • 🏆 14+ anos no mercado • ✅ 7 dias de garantia</p>
           </div>
         </div>
       </div>

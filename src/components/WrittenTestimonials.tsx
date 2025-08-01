@@ -1,7 +1,11 @@
 import React from 'react';
 import { Star, Quote } from 'lucide-react';
 
-const WrittenTestimonials = () => {
+interface WrittenTestimonialsProps {
+  onRedirect: () => void;
+}
+
+const WrittenTestimonials: React.FC<WrittenTestimonialsProps> = ({ onRedirect }) => {
   const testimonials = [
     {
       name: "Maria Santos",
@@ -214,6 +218,17 @@ const WrittenTestimonials = () => {
               <p className="opacity-90 text-sm md:text-base">Associados Felizes</p>
             </div>
           </div>
+        </div>
+
+        {/* CTA Estratégico após prova social */}
+        <div className="text-center mt-8 md:mt-12">
+          <button
+            onClick={onRedirect}
+            className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6 mb-3"
+          >
+            Quero Ser o Próximo Depoimento
+          </button>
+          <p className="text-sm text-gray-500">⭐ 4.9/5 estrelas • 🎯 98% recomendam • 💚 100k+ associados felizes</p>
         </div>
       </div>
     </section>
