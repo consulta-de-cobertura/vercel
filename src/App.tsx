@@ -3,15 +3,14 @@ import { ThemeProvider } from './contexts/ThemeContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Benefits from './components/Benefits';
-import Plans from './components/Plans';
-import HowItWorks from './components/HowItWorks';
-import MembershipBenefits from './components/MembershipBenefits';
 import Differentials from './components/Differentials';
-import Testimonials from './components/Testimonials';
-import WrittenTestimonials from './components/WrittenTestimonials';
-import ObjectionsSection from './components/ObjectionsSection';
 import About from './components/About';
 import TrustSection from './components/TrustSection';
+import Testimonials from './components/Testimonials';
+import WrittenTestimonials from './components/WrittenTestimonials';
+import MembershipBenefits from './components/MembershipBenefits';
+import ObjectionsSection from './components/ObjectionsSection';
+import Plans from './components/Plans';
 import FAQ from './components/FAQ';
 import Footer from './components/Footer';
 import ExitIntentPopup from './components/ExitIntentPopup';
@@ -29,17 +28,36 @@ function App() {
     <ThemeProvider>
       <div className="font-sans text-gray-800 overflow-x-hidden bg-white min-h-screen">
         <Navbar />
+        {/* 1. HERO - Problema + Agitação */}
         <Hero onRedirect={handleDirectRedirect} />
-        <Testimonials />
+        
+        {/* 2. BENEFITS - Apresenta a solução imediatamente */}
         <Benefits />
+        
+        {/* 3. DIFFERENTIALS - Explica por que escolher vocês */}
         <Differentials />
-        <Plans onRedirect={handleDirectRedirect} />
-        <WrittenTestimonials />
-        <MembershipBenefits />
-        <ObjectionsSection onRedirect={handleDirectRedirect} />
+        
+        {/* 4. ABOUT + TRUST - Constrói credibilidade (juntos para maior impacto) */}
         <About />
         <TrustSection />
+        
+        {/* 5. TESTIMONIALS + WRITTEN - Prova social concentrada (mais impacto) */}
+        <Testimonials />
+        <WrittenTestimonials />
+        
+        {/* 6. MEMBERSHIP BENEFITS - Valor agregado (sweeteners) */}
+        <MembershipBenefits />
+        
+        {/* 7. OBJECTIONS - Remove barreiras finais */}
+        <ObjectionsSection onRedirect={handleDirectRedirect} />
+        
+        {/* 8. PLANS - Momento da oferta (quando já estão convencidos) */}
+        <Plans onRedirect={handleDirectRedirect} />
+        
+        {/* 9. FAQ - Últimas dúvidas antes da conversão */}
         <FAQ />
+        
+        {/* 10. FOOTER - Fechamento */}
         <Footer />
         
         {/* Exit Intent Popup */}
