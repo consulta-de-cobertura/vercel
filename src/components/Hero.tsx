@@ -4,9 +4,10 @@ import { ArrowRight, Volume2, Play, Pause, VolumeX } from 'lucide-react';
 
 interface HeroProps {
   onRedirect: () => void;
+  onPresentationMode?: () => void;
 }
 
-const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
+const Hero: React.FC<HeroProps> = ({ onRedirect, onPresentationMode }) => {
   const [typedText, setTypedText] = useState('');
   const [showAudioIcon, setShowAudioIcon] = useState(true);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -443,6 +444,14 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             
             {/* BOTÃO ABAIXO DO SUBTÍTULO */}
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center md:justify-start">
+              {onPresentationMode && (
+                <button
+                  onClick={onPresentationMode}
+                  className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:scale-105 bg-purple-600 hover:bg-purple-700 text-white focus:ring-purple-600 shadow-lg text-lg py-3 px-6 mb-3 animate-pulse-glow"
+                >
+                  🎬 Ver Apresentação Executiva
+                </button>
+              )}
               <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full text-xl py-4 px-8">
                 Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
