@@ -11,6 +11,11 @@ export default {
           light: '#3b82f6',   // Azul mais claro
           dark: '#1e3a8a',    // Azul mais escuro
         },
+        accent: {
+          DEFAULT: '#1e40af', // Same as primary for consistency
+          light: '#3b82f6',
+          dark: '#1e3a8a',
+        },
         // CTAs em verde - ação segura
         cta: {
           DEFAULT: '#16a34a', // Verde confiável
