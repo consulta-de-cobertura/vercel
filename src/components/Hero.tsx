@@ -443,7 +443,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             
             {/* BOTÃO ABAIXO DO SUBTÍTULO */}
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center md:justify-start">
-              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-xl py-4 px-8">
+              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full text-xl py-4 px-8">
                 Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>

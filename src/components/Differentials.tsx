@@ -247,11 +247,11 @@ const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
           <AnimatedSection animation="slideUp" delay={0.2}>
             <button
               onClick={onRedirect}
-              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6 mb-3"
+              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:scale-105 bg-cta hover:bg-cta-dark text-white focus:ring-cta shadow-lg text-lg py-3 px-6 mb-3 animate-cta-glow"
             >
               Quero Fazer Parte Dessa Família
             </button>
-            <p className="text-sm text-gray-500">🏆 Junte-se a mais de 100.000 brasileiros satisfeitos</p>
+            <p className="text-sm text-neutral-500">🏆 Junte-se a mais de 100.000 brasileiros satisfeitos</p>
           </AnimatedSection>
         </div>
       </div>

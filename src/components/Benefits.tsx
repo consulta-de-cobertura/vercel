@@ -220,11 +220,11 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
         <div className="text-center mt-8 md:mt-12">
           <button
             onClick={onRedirect}
-            className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6"
+            className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 hover:scale-105 bg-cta hover:bg-cta-dark text-white focus:ring-cta shadow-lg text-lg py-3 px-6 animate-cta-glow"
           >
             Quero Esses Benefícios Agora
           </button>
-          <p className="text-sm text-gray-500 mt-2">✅ Sem consulta ao SPC • ✅ Frete grátis • ✅ Ativação em 24h</p>
+          <p className="text-sm text-neutral-500 mt-2">✅ Sem consulta ao SPC • ✅ Frete grátis • ✅ Ativação em 24h</p>
         </div>
       </div>
     </section>
