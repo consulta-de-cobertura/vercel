@@ -43,12 +43,12 @@ const Navbar = () => {
       {isOpen && (
         <div className="md:hidden bg-white shadow-lg">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
-            <a href="#beneficios" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors py-2">Benefícios</a>
-            <a href="#planos" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors py-2">Planos</a>
-            <a href="https://federalassociados.com.br/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors py-2">Login</a>
-            <a href="https://federalassociados.com.br/boletos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors py-2">Fatura</a>
-            <a href="#sobre" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors py-2">Sobre Nós</a>
-            <a href="#faq" onClick={() => setIsOpen(false)} className="text-gray-700 hover:text-blue-600 transition-colors py-2">FAQ</a>
+            <a href="#beneficios" onClick={() => setIsOpen(false)} className="text-neutral-700 hover:text-primary transition-colors py-2">Benefícios</a>
+            <a href="#planos" onClick={() => setIsOpen(false)} className="text-neutral-700 hover:text-primary transition-colors py-2">Planos</a>
+            <a href="https://federalassociados.com.br/login" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-neutral-700 hover:text-primary transition-colors py-2">Login</a>
+            <a href="https://federalassociados.com.br/boletos" target="_blank" rel="noopener noreferrer" onClick={() => setIsOpen(false)} className="text-neutral-700 hover:text-primary transition-colors py-2">Fatura</a>
+            <a href="#sobre" onClick={() => setIsOpen(false)} className="text-neutral-700 hover:text-primary transition-colors py-2">Sobre Nós</a>
+            <a href="#faq" onClick={() => setIsOpen(false)} className="text-neutral-700 hover:text-primary transition-colors py-2">FAQ</a>
           </div>
         </div>
       )}

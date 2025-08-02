@@ -413,7 +413,7 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
                   <div className="mt-4">
                     <Button
                       onClick={onRedirect}
-                      className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 button-glow"
+                      className="bg-cta hover:bg-cta-dark text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 animate-cta-glow"
                     >
                       QUERO ME ASSOCIAR AGORA
                     </Button>
