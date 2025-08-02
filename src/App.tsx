@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { ThemeProvider } from './contexts/ThemeContext';
-import PresentationMode from './components/PresentationMode';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import Benefits from './components/Benefits';
@@ -20,28 +19,17 @@ import CadastroModal from './components/CadastroModal';
 
 function App() {
   const [isCadastroModalOpen, setIsCadastroModalOpen] = useState(false);
-  const [isPresentationMode, setIsPresentationMode] = useState(false);
 
   const handleDirectRedirect = () => {
     setIsCadastroModalOpen(true);
   };
 
-  const handlePresentationMode = () => {
-    setIsPresentationMode(true);
-  };
-
   return (
     <ThemeProvider>
-      {isPresentationMode ? (
-        <PresentationMode 
-          onRedirect={handleDirectRedirect}
-          onClose={() => setIsPresentationMode(false)}
-        />
-      ) : (
       <div className="font-sans text-gray-800 overflow-x-hidden bg-white min-h-screen">
         <Navbar />
         {/* 1. HERO - Problema + Agitação */}
-        <Hero onRedirect={handleDirectRedirect} onPresentationMode={handlePresentationMode} />
+        <Hero onRedirect={handleDirectRedirect} />
         
         {/* 2. BENEFITS - Apresenta a solução imediatamente */}
         <Benefits onRedirect={handleDirectRedirect} />
@@ -84,7 +72,6 @@ function App() {
           onClose={() => setIsCadastroModalOpen(false)} 
         />
       </div>
-      )}
     </ThemeProvider>
   );
 }
