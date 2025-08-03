@@ -158,8 +158,8 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
       </div>
 
       <div className={`bg-gradient-to-r ${operator.color} p-4 md:p-6 text-white text-center relative`}>
-        {/* Badge "Recomendado" DENTRO do header, no canto superior direito */}
-        {hasVoice && (
+        {/* Badge "Recomendado" apenas para planos específicos */}
+        {hasVoice && operator.operator === 'Vivo' && (plan.data === '80GB' || plan.data === '150GB') && (
           <div className="absolute top-2 right-2 z-10">
             <div className="bg-green-500 text-white text-xs font-bold px-2 py-1 rounded-full flex items-center shadow-lg">
               <div className="w-2 h-2 bg-white rounded-full mr-1 animate-pulse"></div>

@@ -201,7 +201,7 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
           <div className="text-center mt-8 md:mt-12">
             <button
               onClick={onRedirect}
-              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-purple-800 hover:bg-purple-700 text-white focus:ring-purple-800 shadow-lg text-lg py-3 px-6 mb-3"
+              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-lg py-3 px-6 mb-3"
             >
               Confio na Federal Associados
             </button>

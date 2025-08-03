@@ -342,7 +342,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="w-full">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center md:justify-start">
-              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-xl py-4 px-8">
+              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-xl py-4 px-8 bg-green-600 hover:bg-green-700">
                 Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>

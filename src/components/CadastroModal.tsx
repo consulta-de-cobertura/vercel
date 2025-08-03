@@ -174,7 +174,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
               <div className="space-y-4">
                 <button
                   onClick={handleSiteRedirect}
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                  className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
                 >
                   <ExternalLink className="h-5 w-5 mr-2" />
                   Realizar Cadastro Agora

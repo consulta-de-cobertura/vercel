@@ -85,7 +85,7 @@ const ObjectionsSection: React.FC<ObjectionsSectionProps> = ({ onRedirect }) => 
             </p>
             <button
               onClick={onRedirect}
-              className="inline-block bg-white text-blue-600 font-bold py-2 md:py-3 px-6 md:px-8 rounded-lg hover:bg-gray-100 transition-colors text-sm md:text-base"
+              className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-2 md:py-3 px-6 md:px-8 rounded-lg transition-colors text-sm md:text-base"
             >
               Fazer Cadastro Agora
             </button>
