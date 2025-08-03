@@ -224,7 +224,6 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
         <Button
           onClick={onRedirect}
           className="w-full bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 button-glow mt-auto"
-          style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
         >
           QUERO ME ASSOCIAR AGORA
         </Button>
@@ -414,8 +413,7 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
                   <div className="mt-4">
                     <Button
                       onClick={onRedirect}
-                     className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 button-glow"
-                     style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
+                      className="bg-green-500 hover:bg-green-600 text-white font-bold py-3 px-6 rounded-lg transition-colors duration-300 button-glow"
                     >
                       QUERO ME ASSOCIAR AGORA
                     </Button>
