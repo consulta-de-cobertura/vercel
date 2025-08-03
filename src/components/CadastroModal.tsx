@@ -175,6 +175,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
                 <button
                   onClick={handleSiteRedirect}
                   className="w-full bg-gradient-to-r from-green-600 to-green-700 hover:from-green-700 hover:to-green-800 text-white font-bold py-4 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg flex items-center justify-center"
+                  style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
                 >
                   <ExternalLink className="h-5 w-5 mr-2" />
                   Realizar Cadastro Agora

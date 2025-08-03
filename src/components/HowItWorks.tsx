@@ -83,6 +83,7 @@ const HowItWorks: React.FC<HowItWorksProps> = ({ onRedirect }) => {
             <button
               onClick={onRedirect}
               className="inline-block bg-green-600 hover:bg-green-700 text-white font-bold py-3 md:py-4 px-6 md:px-8 rounded-lg transition-colors text-base md:text-lg"
+              style={{ textShadow: '1px 1px 2px rgba(0, 0, 0, 0.8)' }}
             >
               Iniciar Meu Cadastro Agora
             </button>
