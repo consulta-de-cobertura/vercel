@@ -307,17 +307,18 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
             Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
+          
+          {/* Botão "Sim! eu quero" */}
+          <div className="mt-6">
+            <button
+              onClick={onRedirect}
+              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-xl py-4 px-8 button-glow"
+            >
+              Sim! eu quero
+            </button>
+          </div>
         </div>
 
-        <div className="w-full max-w-3xl mx-auto -mb-2 relative">
-          <img
-            src="https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//photo_2025-07-19_10-29-51.jpg"
-            alt="Federal Associados - Conectividade sem limites"
-            className="w-full h-auto"
-            loading="eager"
-          />
-          
-        </div>
 
         {/* Nova seção entre imagem e vídeo */}
         <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8">
