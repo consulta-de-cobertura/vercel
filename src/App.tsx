@@ -63,9 +63,6 @@ function App() {
         {/* Exit Intent Popup */}
         <ExitIntentPopup onRedirect={handleDirectRedirect} />
         
-        {/* WhatsApp Button */}
-        <WhatsAppButton />
-        
         {/* Cadastro Modal */}
         <CadastroModal 
           isOpen={isCadastroModalOpen} 
