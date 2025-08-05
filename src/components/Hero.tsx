@@ -298,11 +298,11 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 text-white pt-16"
+      className="relative bg-gradient-to-br from-black via-gray-900 to-black text-white pt-16"
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8 relative">
         {/* Overlay pattern para textura */}
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-900/10 via-transparent to-blue-900/10 pointer-events-none"></div>
+        <div className="absolute inset-0 bg-gradient-to-r from-gray-800/10 via-transparent to-gray-800/10 pointer-events-none"></div>
         
         {/* Imagem no topo */}
         {/* Título movido para cima da imagem */}

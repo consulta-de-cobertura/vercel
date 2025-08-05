@@ -46,6 +46,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
       <Dialog.Portal>
         <Dialog.Overlay className="fixed inset-0 bg-black/80 backdrop-blur-sm z-50" />
         <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[90vh] w-[95vw] max-w-[900px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-gradient-to-br from-navy-900 via-navy-800 to-navy-900 shadow-2xl focus:outline-none z-50 overflow-y-auto border border-navy-700">
+        <Dialog.Content className="fixed left-[50%] top-[50%] max-h-[90vh] w-[95vw] max-w-[900px] translate-x-[-50%] translate-y-[-50%] rounded-lg bg-gradient-to-br from-black via-gray-900 to-black shadow-2xl focus:outline-none z-50 overflow-y-auto border border-gray-700">
           <VisuallyHidden.Root>
             <Dialog.Title>Cadastro Federal Associados</Dialog.Title>
           </VisuallyHidden.Root>
@@ -60,7 +61,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
             </button>
 
             {/* Vídeo Section */}
-            <div className="p-6 border-b border-navy-700">
+            <div className="p-6 border-b border-gray-700">
               <div className="text-center mb-6">
                 <div className="bg-secondary text-white rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4 shadow-lg border border-secondary-light">
                   <ExternalLink className="h-8 w-8" />
@@ -70,7 +71,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
               </div>
 
               {/* Vídeo com preload otimizado */}
-              <div className="relative mb-6 rounded-xl overflow-hidden shadow-2xl border border-navy-600">
+              <div className="relative mb-6 rounded-xl overflow-hidden shadow-2xl border border-gray-600">
                 <video
                   className="w-full h-auto object-contain bg-black"
                   controls
@@ -122,7 +123,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
             </div>
 
             {/* Opções de Ativação por Operadora */}
-            <div className="p-6 border-b border-navy-700">
+            <div className="p-6 border-b border-gray-700">
               <div className="text-center mb-6">
                 <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                   Opções de Ativação
@@ -139,7 +140,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
                     className={`rounded-xl p-4 border-2 transition-all duration-300 ${
                       option.highlight 
                         ? 'border-yellow-400 bg-yellow-400/10 shadow-lg backdrop-blur-sm' 
-                        : 'border-navy-600 bg-navy-800/50 backdrop-blur-sm'
+                        : 'border-gray-600 bg-gray-800/50 backdrop-blur-sm'
                     }`}
                   >
                     {option.highlight && (
@@ -251,7 +252,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
                     'https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/grupodowhatsap//photo_2025-07-31_05-32-28.jpg'
                   ].map((imageUrl, index) => (
                     <SwiperSlide key={index}>
-                      <div className="bg-navy-800/50 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-navy-600">
+                      <div className="bg-gray-800/50 backdrop-blur-sm rounded-xl p-3 md:p-4 shadow-lg hover:shadow-xl transition-shadow duration-300 border border-gray-600">
                         <div className="w-full aspect-square overflow-hidden rounded-lg mb-2 md:mb-3">
                           <img
                             src={imageUrl}

@@ -6,16 +6,16 @@ export default {
     extend: {
       colors: {
         primary: {
-          DEFAULT: '#0f172a', // slate-900 - azul escuro quase preto
-          light: '#1e293b',   // slate-800
-          dark: '#020617',    // slate-950 - quase preto
+          DEFAULT: '#000000', // preto puro
+          light: '#1a1a1a',   // preto suave
+          dark: '#000000',    // preto puro
         },
         secondary: {
-          DEFAULT: '#1e40af', // blue-800 - azul profissional
-          light: '#3b82f6',   // blue-500
-          dark: '#1e3a8a',    // blue-900
+          DEFAULT: '#1a1a1a', // cinza escuro
+          light: '#333333',   // cinza médio
+          dark: '#000000',    // preto puro
         },
-        navy: {
+        dark: {
           50: '#f8fafc',
           100: '#f1f5f9',
           200: '#e2e8f0',
@@ -23,10 +23,10 @@ export default {
           400: '#94a3b8',
           500: '#64748b',
           600: '#475569',
-          700: '#334155',
-          800: '#1e293b',
-          900: '#0f172a',
-          950: '#020617',
+          700: '#1a1a1a',
+          800: '#0d0d0d',
+          900: '#000000',
+          950: '#000000',
         },
         accent: {
           DEFAULT: '#10b981', // emerald-500 - verde para CTAs

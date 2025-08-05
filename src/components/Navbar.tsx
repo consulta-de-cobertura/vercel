@@ -15,6 +15,7 @@ const Navbar = () => {
 
   return (
     <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-navy-900/95 backdrop-blur-md shadow-2xl py-2 border-b border-navy-700' : 'bg-gradient-to-r from-navy-900/80 to-navy-800/80 backdrop-blur-sm py-4'}`}>
+    <nav className={`fixed w-full z-50 transition-all duration-300 ${scrolled ? 'bg-black/95 backdrop-blur-md shadow-2xl py-2 border-b border-gray-700' : 'bg-gradient-to-r from-black/80 to-gray-900/80 backdrop-blur-sm py-4'}`}>
       <div className="container mx-auto px-4 flex justify-between items-center">
         <div className="flex items-center">
           <Wifi className="h-8 w-8 text-accent mr-2" />
@@ -41,7 +42,7 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="md:hidden bg-navy-900/95 backdrop-blur-md shadow-2xl border-t border-navy-700">
+        <div className="md:hidden bg-black/95 backdrop-blur-md shadow-2xl border-t border-gray-700">
           <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
             <a href="#beneficios" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-accent transition-colors py-2 font-medium">Benefícios</a>
             <a href="#planos" onClick={() => setIsOpen(false)} className="text-gray-200 hover:text-accent transition-colors py-2 font-medium">Planos</a>
