@@ -40,7 +40,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
   ];
 
   return (
-    <section id="beneficios" className="py-8 md:py-16 bg-slate-900">
+    <section id="beneficios" className="py-8 md:py-16 bg-white">
       <div className="container mx-auto px-4">
         {/* NOVA SEÇÃO ESTRATÉGICA COM A IMAGEM DO CASAL */}
         <div className="mb-12 md:mb-20">
@@ -119,8 +119,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
         </div>
 
         <div className="text-center mb-6 md:mb-10">
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-white">Benefícios Exclusivos para Você</h2>
-          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">Benefícios Exclusivos para Você</h2>
+          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
             Ao se tornar associado, você recebe um chip com benefícios exclusivos que vão muito além da internet.
           </p>
         </div>
@@ -210,8 +210,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
               <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-3 md:mb-4">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-white">{benefit.title}</h3>
-              <p className="text-sm md:text-base text-gray-300">{benefit.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-gray-900">{benefit.title}</h3>
+              <p className="text-sm md:text-base text-gray-600">{benefit.description}</p>
             </div>
           ))}
         </div>
