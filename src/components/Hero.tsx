@@ -322,9 +322,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Nova seção entre imagem e vídeo */}
         <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8">
-          <h2 className="text-2xl md:text-3xl font-bold mb-4 md:mb-6 text-gray-900">
-            O Problema que Afeta 86% dos Brasileiros
-          </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
               Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
