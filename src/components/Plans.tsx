@@ -312,6 +312,81 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
           </div>
         </div>
 
+        {/* Bloco de Esclarecimento Estratégico */}
+        <div className="max-w-4xl mx-auto mb-8 md:mb-12">
+          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-lg border border-gray-200">
+            <div className="text-center mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-4">
+                Por que existem vários planos diferentes na Federal Associados se a internet é ilimitada?
+              </h3>
+              <p className="text-base md:text-lg text-gray-700 leading-relaxed">
+                Aqui na Federal Associados, você <strong>nunca fica sem internet</strong>. Todos os planos possuem navegação ilimitada, o que muda é a velocidade e a experiência que você deseja.
+              </p>
+            </div>
+
+            <div className="mb-6">
+              <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">Veja como funciona:</h4>
+              
+              <div className="space-y-4">
+                <div className="flex items-start p-4 rounded-lg border border-gray-200">
+                  <div className="bg-blue-100 text-blue-800 font-bold px-3 py-1 rounded-full text-sm mr-4 flex-shrink-0">
+                    40GB
+                  </div>
+                  <div>
+                    <p className="text-gray-700">
+                      <strong>Redes sociais, mensagens, uso leve</strong> - Perfeito para quem usa principalmente WhatsApp, Instagram e navegação básica.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 rounded-lg border-2 border-green-300 bg-green-50">
+                  <div className="bg-green-600 text-white font-bold px-3 py-1 rounded-full text-sm mr-4 flex-shrink-0">
+                    80GB
+                  </div>
+                  <div>
+                    <p className="text-gray-700">
+                      <strong>O mais escolhido pelos nossos associados!</strong> Assistir vídeos, trabalho home-office, estudos, jogos online.
+                    </p>
+                    <span className="inline-block bg-green-600 text-white text-xs px-2 py-1 rounded-full mt-2">
+                      Mais Popular
+                    </span>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 rounded-lg border border-gray-200">
+                  <div className="bg-purple-100 text-purple-800 font-bold px-3 py-1 rounded-full text-sm mr-4 flex-shrink-0">
+                    150GB
+                  </div>
+                  <div>
+                    <p className="text-gray-700">
+                      <strong>Uso em Wi-Fi com toda a família</strong> - Roteador, modem, TV, múltiplos dispositivos conectados.
+                    </p>
+                  </div>
+                </div>
+
+                <div className="flex items-start p-4 rounded-lg border border-gray-200">
+                  <div className="bg-orange-100 text-orange-800 font-bold px-3 py-1 rounded-full text-sm mr-4 flex-shrink-0">
+                    200GB+
+                  </div>
+                  <div>
+                    <p className="text-gray-700">
+                      <strong>Empresas, equipes, uso intenso e profissional</strong> - Para quem precisa de máxima performance e velocidade.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="text-center p-4 bg-blue-50 rounded-lg border border-blue-200">
+              <p className="text-base md:text-lg font-semibold text-gray-900">
+                <strong>Ou seja:</strong> todos os planos realmente têm internet ilimitada, o que muda é a velocidade e a finalidade de cada um.
+              </p>
+              <p className="text-sm text-gray-600 mt-2">
+                Escolha o plano que melhor se adapta ao seu estilo de vida e necessidades!
+              </p>
+            </div>
+          </div>
+        </div>
         {/* Planos Filtrados */}
         {currentPlans && currentPlans.length > 0 ? (
           <div className="mb-8">
