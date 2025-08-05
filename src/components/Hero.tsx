@@ -298,13 +298,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-white text-gray-900 pt-16"
+      className="relative bg-slate-900 text-white pt-16"
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
         {/* Imagem no topo */}
         {/* Título movido para cima da imagem */}
         <div className="text-center mb-4">
-          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-900">
+          <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-white">
             Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
           
@@ -323,13 +323,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         {/* Nova seção entre imagem e vídeo */}
         <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8">
           <div className="max-w-4xl mx-auto">
-            <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
               Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
               "acabar" no meio do mês. Segundo pesquisas recentes, <span className="text-red-600 font-bold">86% dos brasileiros afirmam que sua internet não 
               dura o mês todo</span>. Isso não é coincidência - é um problema sistêmico que as operadoras tradicionais criaram 
               para lucrar mais.
             </p>
-            <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
               Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-blue-600 font-bold">100.000 pessoas 
               no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço 
               justo? Descubra agora mesmo como mais de 100.000 brasileiros já estão economizando todo mês. Com internet ILIMITADA de verdade
@@ -358,7 +358,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Internet ilimitada 4G/5G</span>
+                  <span className="text-gray-300">Internet ilimitada 4G/5G</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -366,7 +366,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Ligações ilimitadas para todo o Brasil</span>
+                  <span className="text-gray-300">Ligações ilimitadas para todo o Brasil</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -374,7 +374,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Cadastro sem consulta ao SPC/SERASA</span>
+                  <span className="text-gray-300">Cadastro sem consulta ao SPC/SERASA</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -382,7 +382,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Sem fidelidade</span>
+                  <span className="text-gray-300">Sem fidelidade</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -390,7 +390,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-700">Navegação o mês inteiro, sem surpresas</span>
+                  <span className="text-gray-300">Navegação o mês inteiro, sem surpresas</span>
                 </li>
               </ul>
             </div>

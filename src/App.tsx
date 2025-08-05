@@ -26,7 +26,7 @@ function App() {
 
   return (
     <ThemeProvider>
-      <div className="font-sans text-gray-800 overflow-x-hidden bg-white min-h-screen">
+      <div className="font-sans text-gray-800 overflow-x-hidden bg-slate-900 min-h-screen">
         <Navbar />
         {/* 1. HERO - Problema + Agitação */}
         <Hero onRedirect={handleDirectRedirect} />
