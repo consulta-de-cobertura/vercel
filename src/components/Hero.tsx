@@ -327,14 +327,15 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           </h2>
           <div className="max-w-4xl mx-auto">
             <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-              Se você chegou até aqui, provavelmente já passou pela frustração de ver sua internet "acabar" no meio do mês. 
-              Segundo pesquisas recentes, <span className="text-red-600 font-bold">86% dos brasileiros afirmam que sua internet não 
-              dura o mês todo</span>. Isso não é coincidência - é um problema que as operadoras tradicionais criaram para lucrar mais.
+              Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
+              "acabar" no meio do mês. Segundo pesquisas recentes, <span className="text-red-600 font-bold">86% dos brasileiros afirmam que sua internet não 
+              dura o mês todo</span>. Isso não é coincidência - é um problema sistêmico que as operadoras tradicionais criaram 
+              para lucrar mais.
             </p>
             <p className="text-base md:text-lg text-gray-700 mb-4 leading-relaxed">
-              Mas e se eu te dissesse que existe uma solução que já transformou a vida de mais de <span className="text-blue-600 font-bold">100.000 pessoas 
-              no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço justo. 
-              Descubra como esses brasileiros estão economizando todo mês com internet ILIMITADA de verdade.
+              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-blue-600 font-bold">100.000 pessoas 
+              no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço 
+              justo? Descubra agora mesmo como mais de 100.000 brasileiros já estão economizando todo mês. Com internet ILIMITADA de verdade
             </p>
           </div>
         </div>
