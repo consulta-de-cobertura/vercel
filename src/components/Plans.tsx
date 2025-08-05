@@ -312,6 +312,78 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
           </div>
         </div>
 
+        {/* Planos Filtrados */}
+        {currentPlans && currentPlans.length > 0 ? (
+          <div className="mb-8">
+            <div className="text-center mb-6">
+              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
+                {selectedOperator} - {selectedPlanType === 'withCalls' ? 'Planos com Ligações Ilimitadas' : 'Planos Somente Internet'}
+              </h3>
+              <div className={`inline-flex items-center rounded-full px-4 py-1 text-sm font-medium ${
+                selectedPlanType === 'withCalls' 
+                  ? 'bg-green-900/50 text-green-400'
+                  : 'bg-gray-800 text-gray-300'
+              }`}>
+                {selectedPlanType === 'withCalls' ? (
+                  <>
+                    <Phone className="h-4 w-4 mr-1" />
+                    Recomendado - Inclui ligações para todo o Brasil
+                  </>
+                ) : (
+                  <>
+                    <Wifi className="h-4 w-4 mr-1" />
+                    Apenas dados móveis
+                  </>
+                )}
+              </div>
+            </div>
+            
+            <Swiper
+              modules={[Autoplay, Navigation, Pagination]}
+              spaceBetween={16}
+              slidesPerView={1}
+              breakpoints={{
+                640: { slidesPerView: 2, spaceBetween: 20 },
+                768: { slidesPerView: 2, spaceBetween: 24 },
+                1024: { slidesPerView: 3, spaceBetween: 24 },
+                1280: { slidesPerView: 4, spaceBetween: 24 }
+              }}
+              loop={currentPlans.length > 3}
+              autoplay={{
+                delay: 4000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true
+              }}
+              navigation={true}
+              pagination={{ 
+                clickable: true,
+                dynamicBullets: true
+              }}
+              className="plans-swiper"
+            >
+              {currentPlans.map((plan, index) => (
+                <SwiperSlide key={index} className="h-auto">
+                  {renderPlanCard(plan, currentOperatorData, selectedPlanType === 'withCalls', index)}
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ) : (
+          <div className="text-center py-12">
+            <div className="bg-orange-900/50 border border-orange-500 rounded-lg p-6 max-w-md mx-auto">
+              <h3 className="text-lg font-bold text-orange-800 mb-2">
+                Planos Indisponíveis
+              </h3>
+              <p className="text-orange-300">
+                A operadora {selectedOperator} não possui planos {selectedPlanType === 'withCalls' ? 'com ligações' : 'sem ligações'} disponíveis no momento.
+              </p>
+              <p className="text-sm text-orange-400 mt-2">
+                Tente selecionar outro tipo de plano ou operadora.
+              </p>
+            </div>
+          </div>
+        )}
+
         {/* Bloco de Esclarecimento Estratégico */}
         <div className="max-w-4xl mx-auto mb-6 md:mb-12">
           <div className="bg-white rounded-xl p-4 md:p-8 shadow-lg border border-gray-200">
@@ -387,77 +459,6 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
             </div>
           </div>
         </div>
-        {/* Planos Filtrados */}
-        {currentPlans && currentPlans.length > 0 ? (
-          <div className="mb-8">
-            <div className="text-center mb-6">
-              <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
-                {selectedOperator} - {selectedPlanType === 'withCalls' ? 'Planos com Ligações Ilimitadas' : 'Planos Somente Internet'}
-              </h3>
-              <div className={`inline-flex items-center rounded-full px-4 py-1 text-sm font-medium ${
-                selectedPlanType === 'withCalls' 
-                  ? 'bg-green-900/50 text-green-400'
-                  : 'bg-gray-800 text-gray-300'
-              }`}>
-                {selectedPlanType === 'withCalls' ? (
-                  <>
-                    <Phone className="h-4 w-4 mr-1" />
-                    Recomendado - Inclui ligações para todo o Brasil
-                  </>
-                ) : (
-                  <>
-                    <Wifi className="h-4 w-4 mr-1" />
-                    Apenas dados móveis
-                  </>
-                )}
-              </div>
-            </div>
-            
-            <Swiper
-              modules={[Autoplay, Navigation, Pagination]}
-              spaceBetween={16}
-              slidesPerView={1}
-              breakpoints={{
-                640: { slidesPerView: 2, spaceBetween: 20 },
-                768: { slidesPerView: 2, spaceBetween: 24 },
-                1024: { slidesPerView: 3, spaceBetween: 24 },
-                1280: { slidesPerView: 4, spaceBetween: 24 }
-              }}
-              loop={currentPlans.length > 3}
-              autoplay={{
-                delay: 4000,
-                disableOnInteraction: false,
-                pauseOnMouseEnter: true
-              }}
-              navigation={true}
-              pagination={{ 
-                clickable: true,
-                dynamicBullets: true
-              }}
-              className="plans-swiper"
-            >
-              {currentPlans.map((plan, index) => (
-                <SwiperSlide key={index} className="h-auto">
-                  {renderPlanCard(plan, currentOperatorData, selectedPlanType === 'withCalls', index)}
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
-        ) : (
-          <div className="text-center py-12">
-            <div className="bg-orange-900/50 border border-orange-500 rounded-lg p-6 max-w-md mx-auto">
-              <h3 className="text-lg font-bold text-orange-800 mb-2">
-                Planos Indisponíveis
-              </h3>
-              <p className="text-orange-300">
-                A operadora {selectedOperator} não possui planos {selectedPlanType === 'withCalls' ? 'com ligações' : 'sem ligações'} disponíveis no momento.
-              </p>
-              <p className="text-sm text-orange-400 mt-2">
-                Tente selecionar outro tipo de plano ou operadora.
-              </p>
-            </div>
-          </div>
-        )}
 
         <div className="bg-gray-900 p-4 md:p-6 rounded-2xl shadow-lg max-w-xl mx-auto mt-6 md:mt-12 text-white text-center border border-gray-700">
           <div className="bg-gradient-to-r from-purple-600 to-blue-600 border border-purple-300 p-4 md:p-6 rounded-2xl shadow-lg max-w-xl mx-auto mt-6 md:mt-12 text-white text-center">
