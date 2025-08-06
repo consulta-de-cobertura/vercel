@@ -34,18 +34,18 @@ const MembershipBenefits: React.FC<MembershipBenefitsProps> = ({ onRedirect }) =
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-gray-50">
+    <section className="py-8 md:py-20 bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">Clube de Benefícios Exclusivos</h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-100">Clube de Benefícios Exclusivos</h2>
+          <p className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">
             Ser um associado da Federal Associados é muito mais que ter internet ilimitada. Conheça nossos benefícios exclusivos.
           </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-white rounded-xl p-4 md:p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-200">
+            <div key={index} className="bg-gray-700 rounded-xl p-4 md:p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-600">
               <div className="mb-4">
                 <img
                   src={benefit.image}
@@ -54,7 +54,7 @@ const MembershipBenefits: React.FC<MembershipBenefitsProps> = ({ onRedirect }) =
                 />
               </div>
               <div>
-                <p className="text-sm md:text-base text-gray-600">{benefit.description}</p>
+                <p className="text-sm md:text-base text-gray-400">{benefit.description}</p>
               </div>
             </div>
           ))}

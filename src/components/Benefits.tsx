@@ -40,13 +40,13 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
   ];
 
   return (
-    <section id="beneficios" className="py-8 md:py-16 bg-white">
+    <section id="beneficios" className="py-8 md:py-16 bg-gray-900">
       <div className="container mx-auto px-4">
         {/* NOVA SEÇÃO ESTRATÉGICA COM A IMAGEM DO CASAL */}
         <div className="mb-12 md:mb-20">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
             <div className="order-2 lg:order-1">
-              <p className="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed">
                 Imagine nunca mais precisar pedir senha do Wi-Fi, nunca mais ficar sem internet quando sair de casa. <strong className="text-blue-600">Essa é a liberdade</strong> que a Federal Associados oferece.
               </p>
 
@@ -73,8 +73,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
+                      <h4 className="font-semibold text-gray-100 mb-1">{item.title}</h4>
+                      <p className="text-gray-400 text-sm">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -119,8 +119,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
         </div>
 
         <div className="text-center mb-6 md:mb-10">
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">Benefícios Exclusivos para Você</h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-100">Benefícios Exclusivos para Você</h2>
+          <p className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">
             Ao se tornar associado, você recebe um chip com benefícios exclusivos que vão muito além da internet.
           </p>
         </div>
@@ -164,7 +164,7 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
             </div>
 
             <div className="order-1 lg:order-2">
-              <p className="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed">
                 Nossa <strong className="text-orange-600">cobertura nacional</strong> garante que você esteja sempre conectado com qualidade profissional.
               </p>
 
@@ -191,8 +191,8 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
                       <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
+                      <h4 className="font-semibold text-gray-100 mb-1">{item.title}</h4>
+                      <p className="text-gray-400 text-sm">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -205,13 +205,13 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
           {benefits.map((benefit, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-xl p-4 md:p-6 shadow-md border border-gray-200 hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-800 rounded-xl p-4 md:p-6 shadow-md border border-gray-700 hover:shadow-lg transition-shadow duration-300"
             >
               <div className="bg-blue-100 p-3 rounded-full w-16 h-16 flex items-center justify-center mb-3 md:mb-4">
                 {benefit.icon}
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-gray-900">{benefit.title}</h3>
-              <p className="text-sm md:text-base text-gray-600">{benefit.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2 md:mb-3 text-gray-100">{benefit.title}</h3>
+              <p className="text-sm md:text-base text-gray-400">{benefit.description}</p>
             </div>
           ))}
         </div>

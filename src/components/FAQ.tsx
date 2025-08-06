@@ -49,14 +49,14 @@ const FAQ = () => {
   ];
 
   return (
-    <section id="faq" className="py-8 md:py-20 bg-white">
+    <section id="faq" className="py-8 md:py-20 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
           <div className="inline-flex items-center justify-center bg-blue-100 text-blue-600 rounded-full px-4 py-1 text-sm font-medium mb-4">
             <HelpCircle className="h-4 w-4 mr-1" /> DÚVIDAS FREQUENTES
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">Perguntas Frequentes</h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-100">Perguntas Frequentes</h2>
+          <p className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">
             Encontre respostas para as dúvidas mais comuns sobre nossos planos e serviços.
           </p>
         </div>
@@ -65,13 +65,13 @@ const FAQ = () => {
           {faqItems.map((item, index) => (
             <div 
               key={index} 
-              className="mb-3 md:mb-4 border border-gray-200 rounded-lg overflow-hidden bg-white shadow-sm"
+              className="mb-3 md:mb-4 border border-gray-700 rounded-lg overflow-hidden bg-gray-800 shadow-sm"
             >
               <button
                 onClick={() => toggleFAQ(index)}
                 className="w-full px-4 md:px-6 py-3 md:py-4 text-left flex justify-between items-center focus:outline-none"
               >
-                <span className="font-medium text-base md:text-lg text-gray-900">{item.question}</span>
+                <span className="font-medium text-base md:text-lg text-gray-100">{item.question}</span>
                 {openIndex === index ? 
                   <ChevronUp className="h-4 w-4 md:h-5 md:w-5 text-blue-600" /> : 
                   <ChevronDown className="h-4 w-4 md:h-5 md:w-5 text-gray-400" />
@@ -83,14 +83,14 @@ const FAQ = () => {
                   openIndex === index ? 'max-h-96 pb-4 md:pb-6' : 'max-h-0'
                 }`}
               >
-                <p className="text-sm md:text-base text-gray-600">{item.answer}</p>
+                <p className="text-sm md:text-base text-gray-400">{item.answer}</p>
               </div>
             </div>
           ))}
         </div>
         
         <div className="mt-8 md:mt-12 text-center">
-          <p className="text-sm md:text-base text-gray-600">
+          <p className="text-sm md:text-base text-gray-400">
             Não encontrou a resposta que procurava? Entre em contato com nosso suporte 24h.
           </p>
         </div>

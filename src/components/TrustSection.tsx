@@ -39,16 +39,16 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-gray-50">
+    <section className="py-8 md:py-20 bg-gray-800">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
           <div className="inline-flex items-center justify-center bg-green-100 text-green-600 rounded-full px-4 py-1 text-sm font-medium mb-4">
             <Shield className="h-4 w-4 mr-1" /> CONFIANÇA E SEGURANÇA
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-100">
             Por que Confiar na Federal Associados?
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-400 max-w-3xl mx-auto">
             Não somos apenas mais uma empresa. Somos uma instituição sólida, transparente e comprometida com a satisfação dos nossos associados.
           </p>
         </div>
@@ -57,12 +57,12 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
         <div className="mb-8 md:mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
             <div className="order-1 lg:order-1">
-              <h3 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">
+              <h3 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-100">
                 Suporte 24h real
                 <span className="block text-green-600">com pessoas de verdade</span>
               </h3>
               
-              <p className="text-lg md:text-xl text-gray-700 mb-6 md:mb-8 leading-relaxed">
+              <p className="text-lg md:text-xl text-gray-300 mb-6 md:mb-8 leading-relaxed">
                 Nosso <strong className="text-green-600">atendimento humanizado</strong> está sempre disponível para resolver qualquer questão. Sem robôs, sem chatbots automáticos.
               </p>
 
@@ -89,8 +89,8 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
                       <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                     </div>
                     <div>
-                      <h4 className="font-semibold text-gray-900 mb-1">{item.title}</h4>
-                      <p className="text-gray-600 text-sm">{item.description}</p>
+                      <h4 className="font-semibold text-gray-100 mb-1">{item.title}</h4>
+                      <p className="text-gray-400 text-sm">{item.description}</p>
                     </div>
                   </div>
                 ))}
@@ -139,28 +139,28 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
           {trustIndicators.map((indicator, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-4 md:p-6 text-center shadow-lg border border-gray-200 hover:shadow-xl transition-shadow duration-300"
+              className="bg-gray-700 rounded-xl p-4 md:p-6 text-center shadow-lg border border-gray-600 hover:shadow-xl transition-shadow duration-300"
             >
               <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                 {indicator.icon}
               </div>
-              <h3 className="text-base md:text-lg font-bold mb-2 text-gray-900">{indicator.title}</h3>
-              <p className="text-gray-600 text-xs md:text-sm">{indicator.description}</p>
+              <h3 className="text-base md:text-lg font-bold mb-2 text-gray-100">{indicator.title}</h3>
+              <p className="text-gray-400 text-xs md:text-sm">{indicator.description}</p>
             </div>
           ))}
         </div>
 
         {/* Security Features */}
         <div className="max-w-4xl mx-auto">
-          <div className="bg-white rounded-2xl p-6 md:p-8 shadow-xl border border-gray-200">
+          <div className="bg-gray-700 rounded-2xl p-6 md:p-8 shadow-xl border border-gray-600">
             <div className="text-center mb-6 md:mb-8">
               <div className="bg-green-100 w-16 h-16 md:w-20 md:h-20 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                 <Shield className="h-8 w-8 md:h-10 md:w-10 text-green-600" />
               </div>
-              <h3 className="text-xl md:text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-xl md:text-2xl font-bold text-gray-100 mb-2">
                 Segurança Garantida
               </h3>
-              <p className="text-sm md:text-base text-gray-600">
+              <p className="text-sm md:text-base text-gray-400">
                 Todos os aspectos que comprovam nossa idoneidade e compromisso com você
               </p>
             </div>
@@ -169,17 +169,17 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
               {securityFeatures.map((feature, index) => (
                 <div key={index} className="flex items-start">
                   <CheckCircle className="h-4 w-4 md:h-5 md:w-5 text-green-400 mr-2 md:mr-3 mt-0.5 flex-shrink-0" />
-                  <span className="text-sm md:text-base text-gray-600">{feature}</span>
+                  <span className="text-sm md:text-base text-gray-400">{feature}</span>
                 </div>
               ))}
             </div>
 
             <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">
               <div className="text-center">
-                <h4 className="text-base md:text-lg font-bold text-gray-900 mb-2">
+                <h4 className="text-base md:text-lg font-bold text-gray-800 mb-2">
                   🏆 Empresa Certificada e Reconhecida
                 </h4>
-                <p className="text-sm md:text-base text-gray-600">
+                <p className="text-sm md:text-base text-gray-700">
                   Você pode verificar nossa empresa no site da Receita Federal e conferir todos os nossos certificados de excelência.
                 </p>
                 <div className="flex flex-wrap justify-center gap-2 md:gap-4 mt-4">
