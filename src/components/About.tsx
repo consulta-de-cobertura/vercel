@@ -3,52 +3,52 @@ import { Trophy, Users, Building, MapPin } from 'lucide-react';
 
 const About = () => {
   return (
-    <section id="sobre" className="py-8 md:py-20 bg-white">
+    <section id="sobre" className="py-8 md:py-20 bg-purple-900">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center">
           <div>
             <div className="inline-flex items-center justify-center bg-blue-100 text-blue-600 rounded-full px-4 py-1 text-sm font-medium mb-4">
               <Trophy className="h-4 w-4 mr-1" /> QUEM SOMOS
             </div>
-            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-900">Conheça a Federal Associados</h2>
-            <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
+            <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-white">Conheça a Federal Associados</h2>
+            <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed">
               Somos a Federal Associados, uma empresa sólida com mais de 8 anos de mercado, sede própria, mais de 5 escritórios pelo Brasil, 5 troféus como a melhor associação, e uma base de mais de 100.000 associados satisfeitos.
             </p>
-            <p className="text-base md:text-lg text-gray-600 mb-6 md:mb-8 leading-relaxed">
+            <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8 leading-relaxed">
               Nosso objetivo é democratizar o acesso à internet de qualidade, com planos acessíveis, liberdade total e benefícios exclusivos.
             </p>
             
             <div className="grid grid-cols-2 gap-4 md:gap-6">
-              <div className="bg-gray-50 rounded-lg p-3 md:p-4 border border-gray-200">
+              <div className="bg-purple-800 rounded-lg p-3 md:p-4 border border-purple-600">
                 <div className="flex items-center mb-2">
                   <Trophy className="h-4 w-4 md:h-5 md:w-5 text-orange-400 mr-2" />
-                  <h3 className="font-semibold text-sm md:text-base text-gray-900">5 troféus</h3>
+                  <h3 className="font-semibold text-sm md:text-base text-white">5 troféus</h3>
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm">Reconhecida como melhor associação</p>
+                <p className="text-gray-300 text-xs md:text-sm">Reconhecida como melhor associação</p>
               </div>
               
-              <div className="bg-gray-50 rounded-lg p-3 md:p-4 border border-gray-200">
+              <div className="bg-purple-800 rounded-lg p-3 md:p-4 border border-purple-600">
                 <div className="flex items-center mb-2">
                   <Users className="h-4 w-4 md:h-5 md:w-5 text-orange-400 mr-2" />
-                  <h3 className="font-semibold text-sm md:text-base text-gray-900">100.000+ associados</h3>
+                  <h3 className="font-semibold text-sm md:text-base text-white">100.000+ associados</h3>
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm">Satisfeitos em todo Brasil</p>
+                <p className="text-gray-300 text-xs md:text-sm">Satisfeitos em todo Brasil</p>
               </div>
               
-              <div className="bg-gray-50 rounded-lg p-3 md:p-4 border border-gray-200">
+              <div className="bg-purple-800 rounded-lg p-3 md:p-4 border border-purple-600">
                 <div className="flex items-center mb-2">
                   <Building className="h-4 w-4 md:h-5 md:w-5 text-orange-400 mr-2" />
-                  <h3 className="font-semibold text-sm md:text-base text-gray-900">5+ escritórios</h3>
+                  <h3 className="font-semibold text-sm md:text-base text-white">5+ escritórios</h3>
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm">Presença física em todo o país</p>
+                <p className="text-gray-300 text-xs md:text-sm">Presença física em todo o país</p>
               </div>
               
-              <div className="bg-gray-50 rounded-lg p-3 md:p-4 border border-gray-200">
+              <div className="bg-purple-800 rounded-lg p-3 md:p-4 border border-purple-600">
                 <div className="flex items-center mb-2">
                   <MapPin className="h-4 w-4 md:h-5 md:w-5 text-orange-400 mr-2" />
-                  <h3 className="font-semibold text-sm md:text-base text-gray-900">14+ anos</h3>
+                  <h3 className="font-semibold text-sm md:text-base text-white">14+ anos</h3>
                 </div>
-                <p className="text-gray-600 text-xs md:text-sm">De experiência no mercado</p>
+                <p className="text-gray-300 text-xs md:text-sm">De experiência no mercado</p>
               </div>
             </div>
           </div>

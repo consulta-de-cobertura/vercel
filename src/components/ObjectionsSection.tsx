@@ -40,16 +40,16 @@ const ObjectionsSection: React.FC<ObjectionsSectionProps> = ({ onRedirect }) => 
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-gray-50">
+    <section className="py-8 md:py-20 bg-purple-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
           <div className="inline-flex items-center justify-center bg-red-100 text-red-600 rounded-full px-4 py-1 text-sm font-medium mb-4">
             <Shield className="h-4 w-4 mr-1" /> SUAS DÚVIDAS RESPONDIDAS
           </div>
-          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-gray-900">
+          <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-white">
             Ainda tem receio? Vamos esclarecer tudo!
           </h2>
-          <p className="text-base md:text-lg text-gray-600 max-w-3xl mx-auto">
+          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
             Sabemos que mudanças geram dúvidas. Por isso, respondemos as principais preocupações dos nossos futuros associados.
           </p>
         </div>
@@ -58,19 +58,19 @@ const ObjectionsSection: React.FC<ObjectionsSectionProps> = ({ onRedirect }) => 
           {objections.map((objection, index) => (
             <div 
               key={index}
-              className="bg-white rounded-xl p-4 md:p-6 border border-gray-200 hover:shadow-lg transition-all duration-300 hover:border-blue-500"
+              className="bg-purple-800 rounded-xl p-4 md:p-6 border border-purple-600 hover:shadow-lg transition-all duration-300 hover:border-blue-500"
             >
               <div className="flex items-start mb-3 md:mb-4">
-                <div className="bg-gray-100 p-2 md:p-3 rounded-full mr-3 md:mr-4 shadow-md">
+                <div className="bg-purple-700 p-2 md:p-3 rounded-full mr-3 md:mr-4 shadow-md">
                   {objection.icon}
                 </div>
                 <div className="flex-1">
-                  <h3 className="text-base md:text-lg font-semibold text-gray-900 mb-2">
+                  <h3 className="text-base md:text-lg font-semibold text-white mb-2">
                     {objection.question}
                   </h3>
                 </div>
               </div>
-              <p className="text-sm md:text-base text-gray-600 leading-relaxed">
+              <p className="text-sm md:text-base text-gray-300 leading-relaxed">
                 {objection.answer}
               </p>
             </div>
