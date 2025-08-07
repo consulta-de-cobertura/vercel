@@ -83,9 +83,9 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-100 transition-colors"
+                    className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-800 transition-colors"
                   >
-                    <div className="bg-green-100 p-2 rounded-full">
+                    <div className="bg-gray-700 p-2 rounded-full">
                       <div className="w-2 h-2 bg-green-600 rounded-full"></div>
                     </div>
                     <div>

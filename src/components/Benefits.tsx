@@ -67,9 +67,9 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-800 transition-colors"
                   >
-                    <div className="bg-blue-100 p-2 rounded-full">
+                    <div className="bg-gray-700 p-2 rounded-full">
                       <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                     </div>
                     <div>
@@ -185,9 +185,9 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
                 ].map((item, index) => (
                   <div
                     key={index}
-                    className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                    className="flex items-start space-x-4 p-4 rounded-lg hover:bg-gray-800 transition-colors"
                   >
-                    <div className="bg-orange-100 p-2 rounded-full">
+                    <div className="bg-gray-700 p-2 rounded-full">
                       <div className="w-2 h-2 bg-orange-600 rounded-full"></div>
                     </div>
                     <div>

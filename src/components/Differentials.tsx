@@ -136,9 +136,9 @@ const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
                       key={index}
                       animation="slideUp"
                       delay={0.5 + (index * 0.1)}
-                      className="flex items-start space-x-4 p-3 md:p-4 rounded-lg hover:bg-gray-50 transition-colors"
+                      className="flex items-start space-x-4 p-3 md:p-4 rounded-lg hover:bg-gray-800 transition-colors"
                     >
-                      <div className="bg-blue-100 p-2 rounded-full">
+                      <div className="bg-gray-700 p-2 rounded-full">
                         <div className="w-2 h-2 bg-blue-600 rounded-full"></div>
                       </div>
                       <div>
@@ -150,7 +150,7 @@ const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
                 </div>
 
                 <AnimatedSection animation="slideUp" delay={0.8}>
-                  <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-r from-blue-50 to-purple-50 rounded-xl border border-blue-200">
+                  <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gray-700 rounded-xl border border-gray-600">
                     <div className="flex items-center justify-between">
                       <div>
                         <h4 className="font-bold text-gray-100">Junte-se à nossa família!</h4>
@@ -198,7 +198,7 @@ const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
                   key={index}
                   animation="slideUp"
                   delay={index * 0.1}
-                  className="bg-gray-50 rounded-lg p-4 md:p-6 hover:bg-gray-100 transition-colors"
+                  className="bg-gray-700 rounded-lg p-4 md:p-6 hover:bg-gray-600 transition-colors border border-gray-600"
                 >
                   <h3 className="text-lg md:text-xl font-semibold mb-2 text-gray-100">{item.title}</h3>
                   <p className="text-sm md:text-base text-gray-400">{item.description}</p>
