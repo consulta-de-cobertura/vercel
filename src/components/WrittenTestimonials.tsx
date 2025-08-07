@@ -133,7 +133,7 @@ const WrittenTestimonials: React.FC<WrittenTestimonialsProps> = ({ onRedirect })
                 ))}
               </div>
 
-              <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gradient-to-r from-purple-50 to-pink-50 rounded-xl border border-purple-200">
+              <div className="mt-6 md:mt-8 p-4 md:p-6 bg-gray-700 rounded-xl border border-gray-600">
                 <div className="flex items-center justify-between">
                   <div>
                     <h4 className="font-bold text-gray-100">Seja o próximo a sorrir!</h4>

@@ -305,7 +305,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         {/* Título movido para cima da imagem */}
         <div className="text-center mb-4">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-100">
-            Sua internet não dura o mês todo? <span className="text-red-600 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
+            Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
           
           {/* Botão "Sim! eu quero" */}
@@ -330,7 +330,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               para lucrar mais.
             </p>
             <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
-              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-blue-600 font-bold">100.000 pessoas 
+              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-gray-100 font-bold">100.000 pessoas 
               no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço 
               justo? Descubra agora mesmo como mais de 100.000 brasileiros já estão economizando todo mês. Com internet ILIMITADA de verdade
             </p>
