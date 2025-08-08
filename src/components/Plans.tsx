@@ -235,7 +235,7 @@ const Plans: React.FC<PlansProps> = ({ onRedirect }) => {
   const currentPlans = selectedPlanType === 'withCalls' ? currentOperatorData?.withCalls : currentOperatorData?.withoutCalls;
 
   return (
-    <section id="planos" className="py-6 md:py-12 bg-black">
+    <section id="planos" className="py-6 md:py-12 bg-gray-900">
       <div className="container mx-auto px-4">
         <div className="text-center mb-6 md:mb-10">
           <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-white">

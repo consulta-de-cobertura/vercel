@@ -298,7 +298,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-gray-900 text-gray-100 pt-16"
+      className="relative bg-black text-gray-100 pt-16"
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
         {/* Imagem no topo */}

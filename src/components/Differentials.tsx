@@ -8,7 +8,7 @@ interface DifferentialsProps {
 
 const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
   return (
-    <section className="py-6 md:py-12 bg-gray-900">
+    <section className="py-6 md:py-12 bg-black">
       <div className="container mx-auto px-4">
         <AnimatedSection animation="fade">
           <div className="text-center mb-6 md:mb-10">

@@ -52,7 +52,7 @@ const WrittenTestimonials: React.FC<WrittenTestimonialsProps> = ({ onRedirect })
   ];
 
   return (
-    <section className="py-8 md:py-20 bg-gray-900">
+    <section className="py-8 md:py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-8 md:mb-16">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
