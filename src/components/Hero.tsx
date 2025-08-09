@@ -317,6 +317,55 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
             </button>
           </div>
+          
+          {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
+          <div className="mt-6 md:hidden">
+            <div className="bg-gray-800 rounded-xl p-6 shadow-2xl border border-gray-700">
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
+              <ul className="space-y-3">
+                <li className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300">Internet ilimitada 4G/5G</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300">Ligações ilimitadas para todo o Brasil</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300">Cadastro sem consulta ao SPC/SERASA</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300">Sem fidelidade</span>
+                </li>
+                <li className="flex items-start">
+                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
+                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                    </svg>
+                  </div>
+                  <span className="text-gray-300">Navegação o mês inteiro, sem surpresas</span>
+                </li>
+              </ul>
+            </div>
+          </div>
         </div>
 
 
