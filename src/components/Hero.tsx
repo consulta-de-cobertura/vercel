@@ -324,46 +324,41 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               <h3 className="text-xl font-bold mb-4 text-gray-100">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Internet ilimitada 4G/5G</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Ligações ilimitadas</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
+                  <span className="text-yellow-400 font-semibold">Internet grátis todo mês</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Sem consulta ao SPC/SERASA</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Sem fidelidade</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Internet o mês todo, sem surpresas</span>
                 </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
+                  <span className="text-blue-400 font-semibold">Transforme sua internet em renda extra</span>
+                </li>
               </ul>
+              
+              <div className="mt-6 p-4 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg border border-blue-500/30">
+                <p className="text-center text-gray-300 text-sm">
+                  <span className="text-yellow-400 font-bold">Continue lendo esta página e descubra como</span><br/>
+                  <span className="text-blue-400">transformar sua internet em uma fonte de renda mensal</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -402,46 +397,41 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
               <h3 className="text-xl font-bold mb-4 text-gray-100">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Internet ilimitada 4G/5G</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Ligações ilimitadas</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
+                  <span className="text-yellow-400 font-semibold">Internet grátis todo mês</span>
+                </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Sem consulta ao SPC/SERASA</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Sem fidelidade</span>
                 </li>
                 <li className="flex items-start">
-                  <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
-                    <svg className="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
-                  </div>
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
                   <span className="text-gray-300">Internet o mês todo, sem surpresas</span>
                 </li>
+                <li className="flex items-start">
+                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
+                  <span className="text-blue-400 font-semibold">Transforme sua internet em renda extra</span>
+                </li>
               </ul>
+              
+              <div className="mt-6 p-4 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg border border-blue-500/30">
+                <p className="text-center text-gray-300 text-sm">
+                  <span className="text-yellow-400 font-bold">Continue lendo esta página e descubra como</span><br/>
+                  <span className="text-blue-400">transformar sua internet em uma fonte de renda mensal</span>
+                </p>
+              </div>
             </div>
           </div>
         </div>
