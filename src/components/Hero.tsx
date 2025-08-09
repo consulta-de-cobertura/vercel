@@ -302,17 +302,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
         {/* Imagem no topo */}
-        <div className="text-center mb-6">
-          <img
-            src="https://zqkbaizdfmeheownhjeg.supabase.co/storage/v1/object/public/imagens//federalassociadosimg2alt.jpg"
-            alt="Federal Associados - Internet Ilimitada"
-            className="mx-auto w-64 md:w-80 h-auto rounded-lg shadow-lg"
-            loading="eager"
-            decoding="async"
-          />
-        </div>
-
-        {/* Título principal */}
+        {/* Título movido para cima da imagem */}
         <div className="text-center mb-4">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-100">
             Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
