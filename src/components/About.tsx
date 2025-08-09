@@ -12,7 +12,7 @@ const About = () => {
             </div>
             <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6 text-gray-100">Conheça a Federal Associados</h2>
             <p className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 leading-relaxed">
-              Somos a Federal Associados, uma empresa sólida com mais de 8 anos de mercado, sede própria, mais de 5 escritórios pelo Brasil, 5 troféus como a melhor associação, e uma base de mais de 100.000 associados satisfeitos.
+              Somos a Federal Associados, uma empresa sólida com mais de 14 anos de mercado, sede própria, mais de 5 escritórios pelo Brasil, 5 troféus como a melhor associação, e uma base de mais de 100.000 associados satisfeitos.
             </p>
             <p className="text-base md:text-lg text-gray-400 mb-6 md:mb-8 leading-relaxed">
               Nosso objetivo é democratizar o acesso à internet de qualidade, com planos acessíveis, liberdade total e benefícios exclusivos.
