@@ -45,16 +45,16 @@ const MembershipBenefits: React.FC<MembershipBenefitsProps> = ({ onRedirect }) =
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto">
           {benefits.map((benefit, index) => (
-            <div key={index} className="bg-gray-700 rounded-xl p-4 md:p-6 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-600">
+            <div key={index} className="bg-gray-700 rounded-xl p-4 shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-600 flex flex-col">
               <div className="mb-4">
                 <img
                   src={benefit.image}
                   alt={`Benefício ${index + 1}`}
-                  className="w-full h-auto rounded-lg"
+                  className="w-full h-48 object-cover rounded-lg"
                 />
               </div>
-              <div>
-                <p className="text-sm md:text-base text-gray-400">{benefit.description}</p>
+              <div className="flex-1 flex items-center">
+                <p className="text-sm text-gray-400 text-center">{benefit.description}</p>
               </div>
             </div>
           ))}
