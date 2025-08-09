@@ -333,7 +333,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-yellow-400 font-semibold">Internet grátis todo mês</span>
+                  <span className="text-gray-300">Internet grátis todo mês</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -349,14 +349,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-blue-400 font-semibold">Transforme sua internet em renda extra</span>
+                  <span className="text-gray-300">Transforme sua internet em renda extra</span>
                 </li>
               </ul>
               
-              <div className="mt-6 p-4 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg border border-blue-500/30">
+              <div className="mt-6 p-4 bg-gray-700 rounded-lg border border-gray-600">
                 <p className="text-center text-gray-300 text-sm">
-                  <span className="text-yellow-400 font-bold">Continue lendo esta página e descubra como</span><br/>
-                  <span className="text-blue-400">transformar sua internet em uma fonte de renda mensal</span>
+                  Continue lendo esta página e descubra como
                 </p>
               </div>
             </div>
@@ -406,7 +405,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-yellow-400 font-semibold">Internet grátis todo mês</span>
+                  <span className="text-gray-300">Internet grátis todo mês</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -422,14 +421,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-blue-400 font-semibold">Transforme sua internet em renda extra</span>
+                  <span className="text-gray-300">Transforme sua internet em renda extra</span>
                 </li>
               </ul>
               
-              <div className="mt-6 p-4 bg-gradient-to-r from-blue-900/50 to-purple-900/50 rounded-lg border border-blue-500/30">
+              <div className="mt-6 p-4 bg-gray-700 rounded-lg border border-gray-600">
                 <p className="text-center text-gray-300 text-sm">
-                  <span className="text-yellow-400 font-bold">Continue lendo esta página e descubra como</span><br/>
-                  <span className="text-blue-400">transformar sua internet em uma fonte de renda mensal</span>
+                  Continue lendo esta página e descubra como
                 </p>
               </div>
             </div>
