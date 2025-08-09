@@ -337,7 +337,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-300">Ligações ilimitadas para todo o Brasil</span>
+                  <span className="text-gray-300">Ligações ilimitadas</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
@@ -415,7 +415,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <span className="text-gray-300">Ligações ilimitadas para todo o Brasil</span>
+                  <span className="text-gray-300">Ligações ilimitadas</span>
                 </li>
                 <li className="flex items-start">
                   <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
