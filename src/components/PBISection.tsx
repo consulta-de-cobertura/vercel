@@ -30,8 +30,8 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
   ];
 
   const earningsTable = [
-    { indicados: "10", ganho1mes: "Internet grátis + R$ 608,10", recorrente: "Mensalidade paga" },
-    { indicados: "20", ganho1mes: "Internet grátis + R$ 1.216,20", recorrente: "R$ extra todo mês" }
+    { indicados: "10", ganho1mes: "Internet grátis + R$ 608,10 de adesão no bolso", recorrente: "+ 10% de mensalidade de cada um deles." },
+    { indicados: "20", ganho1mes: "Internet grátis + R$ 1.216,20 de adesão no bolso", recorrente: "+ 10% de mensalidade de cada um deles." }
   ];
 
   // Vídeos de comprovantes divididos em duas fileiras
@@ -48,7 +48,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
   const bottomVideos = videoTestimonials.slice(3, 6);
 
   return (
-    <section className="py-8 md:py-20 bg-gradient-to-br from-green-900 via-green-800 to-emerald-900">
+    <section className="py-8 md:py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
@@ -70,15 +70,15 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           </h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 max-w-5xl mx-auto">
             {steps.map((step, index) => (
-              <div key={index} className="bg-white/10 backdrop-blur-sm rounded-xl p-4 md:p-6 text-center border border-white/20">
-                <div className="bg-white/20 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
+              <div key={index} className="bg-gray-800 rounded-xl p-4 md:p-6 text-center border border-gray-700">
+                <div className="bg-gray-700 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
                   {step.icon}
                 </div>
                 <div className="bg-green-500 text-white text-sm font-bold px-3 py-1 rounded-full mb-3 inline-block">
                   Passo {index + 1}
                 </div>
                 <h4 className="text-base md:text-lg font-semibold mb-2 text-white">{step.title}</h4>
-                <p className="text-sm md:text-base text-green-100">{step.description}</p>
+                <p className="text-sm md:text-base text-gray-400">{step.description}</p>
               </div>
             ))}
           </div>
@@ -86,7 +86,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
 
         {/* Quando sua internet fica grátis */}
         <div className="mb-8 md:mb-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 max-w-4xl mx-auto">
+          <div className="bg-gray-800 rounded-2xl p-6 md:p-8 border border-gray-700 max-w-4xl mx-auto">
             <h3 className="text-xl md:text-2xl font-bold text-center mb-4 md:mb-6 text-white">
               Quando sua internet fica grátis?
             </h3>
@@ -95,7 +95,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
                 <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
                   <CheckCircle className="h-4 w-4 text-white" />
                 </div>
-                <p className="text-sm md:text-base text-green-100">
+                <p className="text-sm md:text-base text-gray-300">
                   <strong>Com apenas 10 indicados ativos no mesmo plano que você usar</strong>, o valor da sua mensalidade já está pago.
                 </p>
               </div>
@@ -103,7 +103,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
                 <div className="bg-green-500 rounded-full p-1 mr-3 mt-1">
                   <CheckCircle className="h-4 w-4 text-white" />
                 </div>
-                <p className="text-sm md:text-base text-green-100">
+                <p className="text-sm md:text-base text-gray-300">
                   <strong>Isso significa: internet grátis para sempre</strong> enquanto eles permanecerem ativos.
                 </p>
               </div>
@@ -116,7 +116,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-white">
             Exemplo de ganhos no plano de R$ 69,90
           </h3>
-          <div className="bg-white/10 backdrop-blur-sm rounded-xl overflow-hidden border border-white/20 max-w-4xl mx-auto">
+          <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 max-w-4xl mx-auto">
             <div className="overflow-x-auto">
               <table className="w-full">
                 <thead className="bg-green-600">
@@ -128,15 +128,22 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
                 </thead>
                 <tbody>
                   {earningsTable.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-white/5' : 'bg-white/10'}>
+                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-700' : 'bg-gray-600'}>
                       <td className="px-4 py-3 text-sm md:text-base text-white font-semibold">{row.indicados}</td>
-                      <td className="px-4 py-3 text-sm md:text-base text-green-200">{row.ganho1mes}</td>
-                      <td className="px-4 py-3 text-sm md:text-base text-green-200">{row.recorrente}</td>
+                      <td className="px-4 py-3 text-sm md:text-base text-gray-200">{row.ganho1mes}</td>
+                      <td className="px-4 py-3 text-sm md:text-base text-gray-200">{row.recorrente}</td>
                     </tr>
                   ))}
                 </tbody>
               </table>
             </div>
+          </div>
+          
+          {/* Texto adicional sobre multiplicação */}
+          <div className="text-center mt-6 md:mt-8">
+            <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+              Agora imagina isso se multiplicando cada vez mais, cada vez mais, e sua rede crescendo todos os meses.
+            </p>
           </div>
         </div>
 
@@ -150,7 +157,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           <div className="mb-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
               {topVideos.map((videoUrl, index) => (
-                <div key={index} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-white/20">
+                <div key={index} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
                   <video
                     className="absolute inset-0 w-full h-full object-contain bg-black"
                     preload="metadata"
@@ -198,7 +205,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           {/* Segunda fileira - 3 vídeos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {bottomVideos.map((videoUrl, index) => (
-              <div key={index + 3} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-white/20">
+              <div key={index + 3} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
                 <video
                   className="absolute inset-0 w-full h-full object-contain bg-black"
                   preload="metadata"
@@ -244,11 +251,11 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
 
           {/* Informação sobre saques */}
           <div className="text-center mt-6 md:mt-8">
-            <div className="bg-white/10 backdrop-blur-sm rounded-lg p-4 md:p-6 border border-white/20 max-w-2xl mx-auto">
+            <div className="bg-gray-800 rounded-lg p-4 md:p-6 border border-gray-700 max-w-2xl mx-auto">
               <h4 className="text-lg md:text-xl font-bold text-white mb-2">
                 💰 Saque toda quarta-feira
               </h4>
-              <p className="text-sm md:text-base text-green-100">
+              <p className="text-sm md:text-base text-gray-300">
                 Você ingressará em nosso grupo da empresa, onde os nossos líderes tirarão todas as suas dúvidas relacionadas ao programa PBI, como começar, artes para utilizar, toda a instrução que você irá precisar.
               </p>
             </div>
@@ -257,11 +264,11 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
 
         {/* CTA Final */}
         <div className="text-center">
-          <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-6 md:p-8 border border-white/20 max-w-4xl mx-auto">
+          <div className="bg-gray-800 rounded-2xl p-6 md:p-8 border border-gray-700 max-w-4xl mx-auto">
             <h3 className="text-xl md:text-2xl font-bold mb-3 md:mb-4 text-white">
               💵 Quanto antes você começar, mais rápido terá internet grátis e renda extra.
             </h3>
-            <p className="text-base md:text-lg text-green-100 mb-6 md:mb-8">
+            <p className="text-base md:text-lg text-gray-300 mb-6 md:mb-8">
               Clique no botão abaixo e ative seu plano agora mesmo.
             </p>
             <button
@@ -270,7 +277,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
             >
               Quero participar <ArrowRight className="ml-2 h-6 w-6" />
             </button>
-            <p className="text-sm text-green-200">🚀 Comece hoje e transforme sua internet em renda extra</p>
+            <p className="text-sm text-gray-400">🚀 Comece hoje e transforme sua internet em renda extra</p>
           </div>
         </div>
       </div>
