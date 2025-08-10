@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
-import { Calculator, TrendingUp } from 'lucide-react';
+import { Calculator, TrendingUp, ArrowRight } from 'lucide-react';
 
-const PBICalculator = () => {
+interface PBICalculatorProps {
+  onRedirect: () => void;
+}
+
+const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
   const [indicacoes, setIndicacoes] = useState<number>(0);
   const [planoValor, setPlanoValor] = useState<number>(69.90);
   const [meses, setMeses] = useState<number>(1);
@@ -54,7 +58,7 @@ const PBICalculator = () => {
     <div className="bg-gray-800 rounded-2xl p-6 md:p-8 border border-gray-700 max-w-4xl mx-auto">
       <div className="text-center mb-6">
         <div className="flex items-center justify-center mb-4">
-          <Calculator className="h-8 w-8 text-green-500 mr-3" />
+          <Calculator className="h-8 w-8 text-white mr-3" />
           <h3 className="text-2xl md:text-3xl font-bold text-white">
             💰 Calcule seus ganhos com o PBI
           </h3>
@@ -102,8 +106,16 @@ const PBICalculator = () => {
           </label>
           <input
             type="number"
-            value={meses || ''}
-            onChange={(e) => setMeses(parseInt(e.target.value) || 1)}
+            value={meses === 0 ? '' : meses}
+            onChange={(e) => {
+              const value = e.target.value;
+              if (value === '') {
+                setMeses(0);
+              } else {
+                const numValue = parseInt(value);
+                setMeses(isNaN(numValue) ? 0 : Math.max(1, numValue));
+              }
+            }}
             placeholder="Quantidade de meses"
             className="w-full p-3 rounded-lg border border-gray-600 bg-gray-700 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-green-500"
             min="1"
@@ -114,7 +126,7 @@ const PBICalculator = () => {
       <div className="text-center mb-6">
         <button
           onClick={calcular}
-          className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 transform hover:scale-105 shadow-lg"
+          className="bg-gray-600 hover:bg-gray-700 text-white font-bold py-3 px-8 rounded-lg transition-colors duration-300 transform hover:scale-105 shadow-lg"
         >
           <Calculator className="h-5 w-5 inline mr-2" />
           Calcular Ganhos
@@ -124,13 +136,13 @@ const PBICalculator = () => {
       {showResult && indicacoes > 0 && (
         <div className="bg-gray-700 rounded-xl p-6 border border-gray-600">
           <div className="text-center mb-4">
-            <TrendingUp className="h-8 w-8 text-green-500 mx-auto mb-2" />
+            <TrendingUp className="h-8 w-8 text-white mx-auto mb-2" />
             <h4 className="text-xl font-bold text-white">📊 Resultado</h4>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="text-center p-4 bg-gray-800 rounded-lg">
-              <div className="text-2xl font-bold text-green-400 mb-2">
+              <div className="text-2xl font-bold text-white mb-2">
                 R$ {ganhoAdesao.toFixed(2)}
               </div>
               <p className="text-sm text-gray-300">
@@ -139,7 +151,7 @@ const PBICalculator = () => {
             </div>
 
             <div className="text-center p-4 bg-gray-800 rounded-lg">
-              <div className="text-2xl font-bold text-blue-400 mb-2">
+              <div className="text-2xl font-bold text-white mb-2">
                 R$ {ganhoRecorrente.toFixed(2)}/mês
               </div>
               <p className="text-sm text-gray-300">
@@ -150,20 +162,20 @@ const PBICalculator = () => {
 
           <div className="mt-6 pt-6 border-t border-gray-600">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <div className="text-center p-4 bg-gradient-to-r from-green-600 to-green-700 rounded-lg">
+              <div className="text-center p-4 bg-gray-600 rounded-lg">
                 <div className="text-3xl font-bold text-white mb-2">
                   R$ {totalPrimeiroMes.toFixed(2)}
                 </div>
-                <p className="text-sm text-green-100">
+                <p className="text-sm text-gray-300">
                   💰 Total do 1º mês (adesão + recorrente)
                 </p>
               </div>
 
-              <div className="text-center p-4 bg-gradient-to-r from-purple-600 to-purple-700 rounded-lg">
+              <div className="text-center p-4 bg-gray-600 rounded-lg">
                 <div className="text-3xl font-bold text-white mb-2">
                   R$ {totalAcumulado.toFixed(2)}
                 </div>
-                <p className="text-sm text-purple-100">
+                <p className="text-sm text-gray-300">
                   📆 Total acumulado em {meses} {meses === 1 ? 'mês' : 'meses'}
                 </p>
               </div>
@@ -179,6 +191,16 @@ const PBICalculator = () => {
                 <p className="text-sm text-yellow-200">
                   Com {indicacoes} indicados ativos, o valor da sua mensalidade já está pago pela recorrência!
                 </p>
+                
+                {/* Botão de gatilho após a mensagem */}
+                <div className="mt-4">
+                  <button
+                    onClick={onRedirect}
+                    className="bg-green-600 hover:bg-green-700 text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg animate-pulse"
+                  >
+                    🚀 QUERO COMEÇAR AGORA E TER INTERNET GRÁTIS! <ArrowRight className="inline h-5 w-5 ml-2" />
+                  </button>
+                </div>
               </div>
             </div>
           )}

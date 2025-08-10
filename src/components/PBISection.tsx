@@ -150,7 +150,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
 
         {/* Calculadora de Ganhos PBI */}
         <div className="mb-8 md:mb-16">
-          <PBICalculator />
+          <PBICalculator onRedirect={onRedirect} />
         </div>
 
         {/* Texto sobre multiplicação */}
