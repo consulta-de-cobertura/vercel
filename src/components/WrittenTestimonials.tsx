@@ -215,7 +215,6 @@ const WrittenTestimonials: React.FC<WrittenTestimonialsProps> = ({ onRedirect })
           >
             Quero Ser o Próximo Depoimento
           </button>
-          <p className="text-sm text-gray-500">⭐ 4.9/5 estrelas • 🎯 98% recomendam • 💚 100k+ associados felizes</p>
         </div>
       </div>
     </section>

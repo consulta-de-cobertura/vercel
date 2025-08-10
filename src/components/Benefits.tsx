@@ -224,7 +224,6 @@ const Benefits: React.FC<BenefitsProps> = ({ onRedirect }) => {
           >
             Quero Esses Benefícios Agora
           </button>
-          <p className="text-sm text-gray-500 mt-2">✅ Sem consulta ao SPC • ✅ Frete grátis • ✅ Ativação em 24h</p>
         </div>
       </div>
     </section>

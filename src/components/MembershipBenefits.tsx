@@ -68,7 +68,6 @@ const MembershipBenefits: React.FC<MembershipBenefitsProps> = ({ onRedirect }) =
           >
             Quero Todos Esses Benefícios
           </button>
-          <p className="text-sm text-gray-500">🎬 Cinema grátis • 💰 Descontos exclusivos • 🏥 Saúde com desconto</p>
         </div>
       </div>
     </section>

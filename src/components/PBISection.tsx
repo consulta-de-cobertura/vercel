@@ -277,7 +277,6 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
             >
               Quero participar <ArrowRight className="ml-2 h-6 w-6" />
             </button>
-            <p className="text-sm text-gray-400">🚀 Comece hoje e transforme sua internet em renda extra</p>
           </div>
         </div>
       </div>
