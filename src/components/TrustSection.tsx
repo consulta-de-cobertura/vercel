@@ -206,6 +206,7 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
               Confio na Federal Associados
             </button>
             <p className="text-sm text-gray-500">🛡️ Empresa certificada • 🏆 14+ anos no mercado • ✅ 7 dias de garantia</p>
+          </div>
         </div>
       </div>
     </section>
