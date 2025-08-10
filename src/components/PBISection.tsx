@@ -2,6 +2,7 @@ import React from 'react';
 import { DollarSign, Users, TrendingUp, Gift, CheckCircle, ArrowRight } from 'lucide-react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
+import PBICalculator from './PBICalculator';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -141,10 +142,22 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           
           {/* Texto adicional sobre multiplicação */}
           <div className="text-center mt-6 md:mt-8">
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
-              Agora imagina isso se multiplicando cada vez mais, cada vez mais, e sua rede crescendo todos os meses.
+            <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12">
+              Quer simular seus ganhos personalizados? Use nossa calculadora:
             </p>
           </div>
+        </div>
+
+        {/* Calculadora de Ganhos PBI */}
+        <div className="mb-8 md:mb-16">
+          <PBICalculator />
+        </div>
+
+        {/* Texto sobre multiplicação */}
+        <div className="text-center mb-8 md:mb-16">
+          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+            Agora imagina isso se multiplicando cada vez mais, cada vez mais, e sua rede crescendo todos os meses.
+          </p>
         </div>
 
         {/* Prova Social - Vídeos */}
