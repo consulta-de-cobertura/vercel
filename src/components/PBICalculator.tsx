@@ -54,6 +54,14 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
   // Total acumulado (adesão apenas 1x)
   const totalAcumulado = ganhoAdesao + (ganhoRecorrente * meses);
 
+  // Função para formatar valores em Real brasileiro
+  const formatCurrency = (value: number): string => {
+    return value.toLocaleString('pt-BR', {
+      minimumFractionDigits: 2,
+      maximumFractionDigits: 2
+    });
+  };
+
   return (
     <div className="bg-gray-800 rounded-2xl p-6 md:p-8 border border-gray-700 max-w-4xl mx-auto">
       <div className="text-center mb-6">
@@ -143,7 +151,7 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
             <div className="text-center p-4 bg-gray-800 rounded-lg">
               <div className="text-2xl font-bold text-white mb-2">
-                R$ {ganhoAdesao.toFixed(2)}
+                R$ {formatCurrency(ganhoAdesao)}
               </div>
               <p className="text-sm text-gray-300">
                 💵 Ganho único no 1º mês com adesão ({indicacoes} indicações)
@@ -152,10 +160,10 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
 
             <div className="text-center p-4 bg-gray-800 rounded-lg">
               <div className="text-2xl font-bold text-white mb-2">
-                R$ {ganhoRecorrente.toFixed(2)}/mês
+                R$ {formatCurrency(ganhoRecorrente)}/mês
               </div>
               <p className="text-sm text-gray-300">
-                ♻️ Ganho recorrente mensal com os mesmos indicados
+                ♻️ Ganho recorrente mensal com os indicados citados acima. Esse valor cairá todos os meses no seu escritório virtual.
               </p>
             </div>
           </div>
@@ -164,7 +172,7 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div className="text-center p-4 bg-gray-600 rounded-lg">
                 <div className="text-3xl font-bold text-white mb-2">
-                  R$ {totalPrimeiroMes.toFixed(2)}
+                  R$ {formatCurrency(totalPrimeiroMes)}
                 </div>
                 <p className="text-sm text-gray-300">
                   💰 Total do 1º mês (adesão + recorrente)
@@ -173,7 +181,7 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
 
               <div className="text-center p-4 bg-gray-600 rounded-lg">
                 <div className="text-3xl font-bold text-white mb-2">
-                  R$ {totalAcumulado.toFixed(2)}
+                  R$ {formatCurrency(totalAcumulado)}
                 </div>
                 <p className="text-sm text-gray-300">
                   📆 Total acumulado em {meses} {meses === 1 ? 'mês' : 'meses'}
