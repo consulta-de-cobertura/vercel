@@ -251,7 +251,6 @@ const Differentials: React.FC<DifferentialsProps> = ({ onRedirect }) => {
             >
               Quero Fazer Parte Dessa Família
             </button>
-            <p className="text-sm text-gray-500">🏆 Junte-se a mais de 100.000 brasileiros satisfeitos</p>
           </AnimatedSection>
         </div>
       </div>
