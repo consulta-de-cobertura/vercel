@@ -57,7 +57,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
             <Gift className="h-4 w-4 mr-1" /> PROGRAMA DE INDICAÇÃO
           </div>
           <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-white">
-            Transforme sua internet ilimitada em uma grande fonte de renda extra e nunca mais pague por internet!
+            Transforme sua internet ilimitada em uma grande fonte de renda extra e <span className="text-yellow-400">nunca mais pague por internet!</span>
           </h2>
           <p className="text-base md:text-lg text-green-100 max-w-4xl mx-auto mb-4">
             Descubra agora como associados estão <span className="text-yellow-400 font-bold bg-yellow-900/30 px-2 py-1 rounded">faturando de R$ 2.000 a R$ 10.000 por mês, trabalhando de casa</span> com a Federal Associados
