@@ -49,7 +49,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
   const bottomVideos = videoTestimonials.slice(3, 6);
 
   return (
-    <section className="py-8 md:py-20 bg-black">
+    <section id="pbi-section" className="py-8 md:py-20 bg-black">
       <div className="container mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-8 md:mb-16">
@@ -57,10 +57,13 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
             <Gift className="h-4 w-4 mr-1" /> PROGRAMA DE INDICAÇÃO
           </div>
           <h2 className="text-2xl md:text-4xl font-bold mb-2 md:mb-4 text-white">
-            Transforme sua internet ilimitada em uma renda extra e nunca mais pague mensalidade!
+            Transforme sua internet ilimitada em uma grande fonte de renda extra e nunca mais pague por internet!
           </h2>
+          <p className="text-base md:text-lg text-green-100 max-w-4xl mx-auto mb-4">
+            Descubra agora como associados estão <span className="text-yellow-400 font-bold bg-yellow-900/30 px-2 py-1 rounded">faturando de R$ 2.000 a R$ 10.000 por mês, trabalhando de casa</span> com a Federal Associados
+          </p>
           <p className="text-base md:text-lg text-green-100 max-w-4xl mx-auto">
-            Com o Programa de Indicação da Federal Associados, você garante internet ilimitada e ainda coloca dinheiro no bolso todos os meses.
+            Com o Programa de Indicação da Federal Associados, você garante internet ilimitada e ainda coloca muito dinheiro no bolso todos os meses.
           </p>
         </div>
 

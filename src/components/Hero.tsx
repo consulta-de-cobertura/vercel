@@ -316,6 +316,21 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             >
               Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
             </button>
+            
+            {/* Botão "Indique e Ganhe" */}
+            <div className="mt-4">
+              <button
+                onClick={() => {
+                  const pbiSection = document.getElementById('pbi-section');
+                  if (pbiSection) {
+                    pbiSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-orange-600 hover:bg-orange-700 text-white focus:ring-orange-600 shadow-lg text-xl py-4 px-8 button-glow"
+              >
+                Indique e Ganhe <ArrowRight className="ml-2 h-6 w-6" />
+              </button>
+            </div>
           </div>
           
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
