@@ -312,7 +312,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="mt-6">
             <button
               onClick={onRedirect}
-              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-xl py-4 px-8 button-glow"
+              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-lg py-3 px-6 button-glow"
             >
               Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
             </button>
@@ -320,8 +320,13 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             {/* Botão "Indique e Ganhe" */}
             <div className="mt-4">
               <button
-                onClick={onRedirect}
-                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-xl py-4 px-8 button-glow"
+                onClick={() => {
+                  const pbiSection = document.getElementById('pbi-section');
+                  if (pbiSection) {
+                    pbiSection.scrollIntoView({ behavior: 'smooth' });
+                  }
+                }}
+                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-lg py-3 px-6 button-glow"
               >
                 Indique e Ganhe <ArrowRight className="ml-2 h-6 w-6" />
               </button>
