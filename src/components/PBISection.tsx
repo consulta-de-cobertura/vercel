@@ -146,7 +146,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           {/* Texto adicional sobre multiplicação */}
           <div className="text-center mt-6 md:mt-8">
             <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12">
-              Quer simular seus ganhos personalizados? Use nossa calculadora:
+              Simule seus ganhos em tempo real. E veja o poder da indicação
             </p>
           </div>
         </div>
