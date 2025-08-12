@@ -72,7 +72,7 @@ const PBICalculator: React.FC<PBICalculatorProps> = ({ onRedirect }) => {
           </h3>
         </div>
         <p className="text-gray-300 mb-6">
-          Informe o número de indicações, o plano e o tempo para ver seus ganhos no 1º mês e acumulados.
+          Informe o número de indicações, o plano e o tempo para ver seus ganhos com o PBI
         </p>
       </div>
 
