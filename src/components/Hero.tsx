@@ -13,10 +13,12 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   const [showVideo, setShowVideo] = useState(true);
   const [videoError, setVideoError] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
+  const [isHeroMuted, setIsHeroMuted] = useState(true);
   
   // REFERÊNCIAS SEPARADAS PARA MOBILE E DESKTOP
   const videoRefMobile = useRef<HTMLVideoElement>(null);
   const videoRefDesktop = useRef<HTMLVideoElement>(null);
+  const videoRefHero = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   
   const fullText = "Conheça a Federal Associados: uma associação autorizada com planos de internet ilimitados, sem burocracia, que vai muito além da conexão. Descubra como mais de 100.000 brasileiros estão economizando todo mês. Com internet ILIMITADA de verdade";
@@ -295,6 +297,25 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
     }
   };
 
+  const handleHeroVideoClick = async (e: React.MouseEvent) => {
+    e.preventDefault();
+    e.stopPropagation();
+    
+    const video = videoRefHero.current;
+    if (!video) return;
+
+    try {
+      // Volta para o início e ativa o som
+      video.currentTime = 0;
+      video.muted = false;
+      setIsHeroMuted(false);
+      
+      await video.play();
+    } catch (error) {
+      console.error('Erro ao controlar vídeo hero:', error);
+    }
+  };
+
   return (
     <section
       ref={sectionRef}
@@ -316,20 +337,55 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             >
               Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
             </button>
-            
-            {/* Botão "Indique e Ganhe" */}
-            <div className="mt-4">
-              <button
-                onClick={() => {
-                  const pbiSection = document.getElementById('pbi-section');
-                  if (pbiSection) {
-                    pbiSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
-              >
-                Indique e Ganhe <ArrowRight className="ml-2 h-6 w-6" />
-              </button>
+          </div>
+          
+          {/* Vídeo Hero com autoplay */}
+          <div className="mt-8 mb-6">
+            <div className="relative max-w-2xl mx-auto">
+              <div className="relative overflow-hidden rounded-2xl shadow-2xl bg-black">
+                <video
+                  ref={videoRefHero}
+                  className="w-full h-auto object-contain bg-black"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  onContextMenu={(e) => e.preventDefault()}
+                  src="https://zzktwtxeeikhdycduxor.supabase.co/storage/v1/object/public/pbii/video_2025-08-12_19-47-32.mp4"
+                  onClick={handleHeroVideoClick}
+                  style={{ cursor: 'pointer' }}
+                >
+                  <style>
+                    {`
+                      video::-webkit-media-controls-overflow-menu-button,
+                      video::-webkit-media-controls-overflow-menu-list,
+                      video::-webkit-media-controls-download-button {
+                        display: none !important;
+                      }
+                      video::-webkit-media-controls-enclosure {
+                        overflow: hidden !important;
+                      }
+                      video::-webkit-media-controls-panel {
+                        overflow: clip !important;
+                      }
+                    `}
+                  </style>
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+                
+                {/* Overlay com ícone de som */}
+                {isHeroMuted && (
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/20">
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-4 shadow-lg animate-pulse">
+                      <div className="flex items-center space-x-2">
+                        <Volume2 className="h-6 w-6 text-gray-700" />
+                        <span className="text-sm font-medium text-gray-700">Clique para ativar o som</span>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
           
