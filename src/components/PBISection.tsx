@@ -37,6 +37,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
 
   // Vídeos de comprovantes divididos em duas fileiras
   const videoTestimonials = [
+    'https://hjqtpzoqcpaejgsoxqon.supabase.co/storage/v1/object/public/pbi/video_2025-08-12_11-02-14.mp4',
     'https://hjqtpzoqcpaejgsoxqon.supabase.co/storage/v1/object/public/pbi/Comprovante%20de%20Saque%20R$150,00%20-%20Federal%20Associados.mp4',
     'https://hjqtpzoqcpaejgsoxqon.supabase.co/storage/v1/object/public/pbi/VID-20250403-WA0007.mp4',
     'https://hjqtpzoqcpaejgsoxqon.supabase.co/storage/v1/object/public/pbi/VID-20250404-WA0009.mp4',
@@ -45,8 +46,8 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
     'https://hjqtpzoqcpaejgsoxqon.supabase.co/storage/v1/object/public/pbi/VID-20250417-WA0003.mp4'
   ];
 
-  const topVideos = videoTestimonials.slice(0, 3);
-  const bottomVideos = videoTestimonials.slice(3, 6);
+  const topVideos = videoTestimonials.slice(0, 4);
+  const bottomVideos = videoTestimonials.slice(4, 7);
 
   return (
     <section id="pbi-section" className="py-8 md:py-20 bg-black">
@@ -115,40 +116,11 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           </div>
         </div>
 
-        {/* Tabela de Ganhos */}
-        <div className="mb-8 md:mb-16">
-          <h3 className="text-xl md:text-2xl font-bold text-center mb-6 md:mb-8 text-white">
-            Exemplo de ganhos no plano de R$ 69,90
-          </h3>
-          <div className="bg-gray-800 rounded-xl overflow-hidden border border-gray-700 max-w-4xl mx-auto">
-            <div className="overflow-x-auto">
-              <table className="w-full">
-                <thead className="bg-green-600">
-                  <tr>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-white">Indicados Ativos</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-white">Ganho no 1º mês</th>
-                    <th className="px-4 py-3 text-left text-sm font-semibold text-white">Ganho recorrente</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {earningsTable.map((row, index) => (
-                    <tr key={index} className={index % 2 === 0 ? 'bg-gray-700' : 'bg-gray-600'}>
-                      <td className="px-4 py-3 text-sm md:text-base text-white font-semibold">{row.indicados}</td>
-                      <td className="px-4 py-3 text-sm md:text-base text-gray-200">{row.ganho1mes}</td>
-                      <td className="px-4 py-3 text-sm md:text-base text-gray-200">{row.recorrente}</td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </div>
-          
-          {/* Texto adicional sobre multiplicação */}
-          <div className="text-center mt-6 md:mt-8">
-            <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto mb-8 md:mb-12">
-              Simule seus ganhos em tempo real. E veja o poder da indicação
-            </p>
-          </div>
+        {/* Texto sobre simulação */}
+        <div className="text-center mb-8 md:mb-16">
+          <p className="text-base md:text-lg text-gray-300 max-w-3xl mx-auto">
+            Simule seus ganhos em tempo real. E veja o poder da indicação
+          </p>
         </div>
 
         {/* Calculadora de Ganhos PBI */}
@@ -171,7 +143,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
           
           {/* Primeira fileira - 3 vídeos */}
           <div className="mb-6">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
+            <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-6 max-w-6xl mx-auto">
               {topVideos.map((videoUrl, index) => (
                 <div key={index} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
                   <video
@@ -218,10 +190,10 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
             </div>
           </div>
 
-          {/* Segunda fileira - 3 vídeos */}
+          {/* Segunda fileira - restante dos vídeos */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 max-w-5xl mx-auto">
             {bottomVideos.map((videoUrl, index) => (
-              <div key={index + 3} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
+              <div key={index + 4} className="relative aspect-square bg-gray-800 rounded-xl overflow-hidden shadow-lg border border-gray-700">
                 <video
                   className="absolute inset-0 w-full h-full object-contain bg-black"
                   preload="metadata"
@@ -259,7 +231,7 @@ const PBISection: React.FC<PBISectionProps> = ({ onRedirect }) => {
                 
                 {/* Overlay com informações */}
                 <div className="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded">
-                  Comprovante {index + 4}
+                  Comprovante {index + 5}
                 </div>
               </div>
             ))}
