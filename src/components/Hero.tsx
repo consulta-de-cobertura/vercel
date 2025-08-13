@@ -244,20 +244,10 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Botões */}
         <div className="text-center mb-4">
-          
-          <div className="mt-6">
-            <button
-              onClick={onRedirect}
-              className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
-            >
-              Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
-            </button>
-          </div>
-          
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-6 md:hidden">
-            <div className="bg-gray-800 rounded-xl p-6 shadow-2xl border border-gray-700">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
+            <div className="p-6">
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -269,7 +259,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet grátis todo mês</span>
+                  <span className="text-gray-300">Internet grátis todo mês com o PBI</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -285,14 +275,17 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Transforme sua internet em renda extra</span>
+                  <span className="text-gray-300">Transformando sua internet em renda extra</span>
                 </li>
               </ul>
               
-              <div className="mt-6 p-4 bg-gray-700 rounded-lg border border-gray-600">
-                <p className="text-center text-gray-300 text-sm">
-                  Continue lendo esta página e descubra como
-                </p>
+              <div className="mt-6">
+                <button
+                  onClick={onRedirect}
+                  className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
+                >
+                  Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
+                </button>
               </div>
             </div>
           </div>
@@ -328,8 +321,8 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* COLUNA DIREITA - DESKTOP ONLY */}
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
-            <div className="bg-gray-800 rounded-xl p-6 shadow-2xl transform rotate-3 hover:rotate-0 transition-transform duration-500 border border-gray-700">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Chega de passar raiva com internet ruim. Aqui na Federal Associados você conta com</h3>
+            <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -341,7 +334,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet grátis todo mês</span>
+                  <span className="text-gray-300">Internet grátis todo mês com o PBI</span>
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -357,14 +350,17 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Transforme sua internet em renda extra</span>
+                  <span className="text-gray-300">Transformando sua internet em renda extra</span>
                 </li>
               </ul>
               
-              <div className="mt-6 p-4 bg-gray-700 rounded-lg border border-gray-600">
-                <p className="text-center text-gray-300 text-sm">
-                  Continue lendo esta página e descubra como
-                </p>
+              <div className="mt-6">
+                <button
+                  onClick={onRedirect}
+                  className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
+                >
+                  Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
+                </button>
               </div>
             </div>
           </div>
