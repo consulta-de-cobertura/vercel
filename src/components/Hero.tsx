@@ -189,7 +189,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Vídeo principal entre título e botão */}
         {showVideo && !videoError && (
-          <div className="text-center mb-3 md:mb-6">
+          <div className="text-center mb-2 md:mb-6">
             <div className="relative max-w-4xl mx-auto">
               <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700">
                 <video
@@ -243,10 +243,10 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         )}
 
         {/* Botões */}
-        <div className="text-center mb-2 md:mb-4">
+        <div className="text-center mb-1 md:mb-4">
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
-          <div className="mt-2 md:hidden">
-            <div className="p-4">
+          <div className="mt-1 md:hidden">
+            <div className="p-3">
               <h3 className="text-xl font-bold mb-4 text-gray-100">Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -279,7 +279,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
               </ul>
               
-              <div className="mt-6">
+              <div className="mt-4">
                 <button
                   onClick={onRedirect}
                   className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
@@ -293,7 +293,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
 
         {/* Nova seção entre imagem e vídeo */}
-        <div className="text-center mb-3 md:mb-8 mt-3 md:mt-8">
+        <div className="text-center mb-2 md:mb-8 mt-2 md:mt-8">
           <div className="max-w-4xl mx-auto">
             <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
               Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
@@ -311,7 +311,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="w-full">
-            <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 mb-1 justify-center md:justify-start">
               <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-lg md:text-xl py-3 md:py-4 px-6 md:px-8 bg-green-600 hover:bg-green-700">
                 Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
