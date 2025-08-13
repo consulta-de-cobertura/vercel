@@ -14,9 +14,8 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
   const [videoError, setVideoError] = useState(false);
   const [isMuted, setIsMuted] = useState(true);
   
-  // REFERÊNCIAS SEPARADAS PARA MOBILE E DESKTOP
-  const videoRefMobile = useRef<HTMLVideoElement>(null);
-  const videoRefDesktop = useRef<HTMLVideoElement>(null);
+  // REFERÊNCIA PARA O VÍDEO PRINCIPAL
+  const videoRef = useRef<HTMLVideoElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
   
   const fullText = "Conheça a Federal Associados: uma associação autorizada com planos de internet ilimitados, sem burocracia, que vai muito além da conexão. Descubra como mais de 100.000 brasileiros estão economizando todo mês. Com internet ILIMITADA de verdade";
@@ -46,15 +45,11 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
       (entries) => {
         entries.forEach((entry) => {
           if (!entry.isIntersecting) {
-            // Parar ambos os vídeos quando sai da viewport
-            const videoMobile = videoRefMobile.current;
-            const videoDesktop = videoRefDesktop.current;
+            // Parar o vídeo quando sai da viewport
+            const video = videoRef.current;
             
-            if (videoMobile && !videoMobile.paused) {
-              videoMobile.pause();
-            }
-            if (videoDesktop && !videoDesktop.paused) {
-              videoDesktop.pause();
+            if (video && !video.paused) {
+              video.pause();
             }
             
             setIsPlaying(false);
@@ -75,9 +70,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
     };
   }, []);
 
-  // Configuração para MOBILE
+  // Configuração do vídeo principal
   useEffect(() => {
-    const video = videoRefMobile.current;
+    const video = videoRef.current;
     if (!video) return;
 
     const handleLoadedData = () => {
@@ -85,10 +80,15 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
       video.volume = 0.8;
       setIsMuted(true);
       setVideoError(false);
+      
+      // Tentar autoplay após carregar
+      video.play().catch(error => {
+        console.log('Autoplay prevented:', error);
+      });
     };
 
     const handleError = () => {
-      console.error('Erro ao carregar vídeo mobile');
+      console.error('Erro ao carregar vídeo');
       setVideoError(true);
       setShowVideo(false);
     };
@@ -116,6 +116,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
     video.volume = 0.8;
     video.preload = 'metadata';
     video.playsInline = true;
+    video.loop = true;
 
     return () => {
       video.removeEventListener('loadeddata', handleLoadedData);
@@ -126,67 +127,16 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
     };
   }, []);
 
-  // Configuração para DESKTOP
-  useEffect(() => {
-    const video = videoRefDesktop.current;
-    if (!video) return;
-
-    const handleLoadedData = () => {
-      video.muted = true;
-      video.volume = 0.8;
-      setIsMuted(true);
-      setVideoError(false);
-    };
-
-    const handleError = () => {
-      console.error('Erro ao carregar vídeo desktop');
-      setVideoError(true);
-      setShowVideo(false);
-    };
-
-    const handlePlay = () => {
-      setIsPlaying(true);
-    };
-
-    const handlePause = () => {
-      setIsPlaying(false);
-    };
-
-    const handleEnded = () => {
-      setIsPlaying(false);
-      video.currentTime = 0;
-    };
-
-    video.addEventListener('loadeddata', handleLoadedData);
-    video.addEventListener('error', handleError);
-    video.addEventListener('play', handlePlay);
-    video.addEventListener('pause', handlePause);
-    video.addEventListener('ended', handleEnded);
-
-    video.muted = true;
-    video.volume = 0.8;
-    video.preload = 'metadata';
-    video.playsInline = true;
-
-    return () => {
-      video.removeEventListener('loadeddata', handleLoadedData);
-      video.removeEventListener('error', handleError);
-      video.removeEventListener('play', handlePlay);
-      video.removeEventListener('pause', handlePause);
-      video.removeEventListener('ended', handleEnded);
-    };
-  }, []);
-
-  const handleVideoClickMobile = async (e: React.MouseEvent) => {
+  const handleVideoClick = async (e: React.MouseEvent) => {
     e.preventDefault();
     e.stopPropagation();
     
-    const video = videoRefMobile.current;
+    const video = videoRef.current;
     if (!video) return;
 
     try {
       if (showAudioIcon || isMuted) {
-        // Primeira vez - ativar som
+        // Primeira vez - ativar som e reiniciar
         video.currentTime = 0;
         video.muted = false;
         setIsMuted(false);
@@ -208,7 +158,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         }
       }
     } catch (error) {
-      console.error('Erro ao controlar vídeo mobile:', error);
+      console.error('Erro ao controlar vídeo:', error);
       
       try {
         video.muted = true;
@@ -217,81 +167,10 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         await video.play();
         setIsPlaying(true);
       } catch (fallbackError) {
-        console.error('Erro no fallback mobile:', fallbackError);
+        console.error('Erro no fallback:', fallbackError);
         setVideoError(true);
         setShowVideo(false);
       }
-    }
-  };
-
-  const handleVideoClickDesktop = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    const video = videoRefDesktop.current;
-    if (!video) return;
-
-    try {
-      if (showAudioIcon || isMuted) {
-        // Primeira vez - ativar som
-        video.currentTime = 0;
-        video.muted = false;
-        setIsMuted(false);
-        setShowAudioIcon(false);
-        
-        await video.play();
-        setIsPlaying(true);
-      } else {
-        // Já tem som - toggle play/pause
-        if (video.paused || video.ended) {
-          if (video.ended) {
-            video.currentTime = 0;
-          }
-          await video.play();
-          setIsPlaying(true);
-        } else {
-          video.pause();
-          setIsPlaying(false);
-        }
-      }
-    } catch (error) {
-      console.error('Erro ao controlar vídeo desktop:', error);
-      
-      try {
-        video.muted = true;
-        setIsMuted(true);
-        video.currentTime = 0;
-        await video.play();
-        setIsPlaying(true);
-      } catch (fallbackError) {
-        console.error('Erro no fallback desktop:', fallbackError);
-        setVideoError(true);
-        setShowVideo(false);
-      }
-    }
-  };
-
-  const toggleMuteDesktop = async (e: React.MouseEvent) => {
-    e.preventDefault();
-    e.stopPropagation();
-    
-    const video = videoRefDesktop.current;
-    if (!video) return;
-
-    try {
-      video.muted = !video.muted;
-      setIsMuted(video.muted);
-      
-      if (!video.muted && showAudioIcon) {
-        setShowAudioIcon(false);
-      }
-      
-      if (!video.muted && video.paused) {
-        await video.play();
-        setIsPlaying(true);
-      }
-    } catch (error) {
-      console.error('Erro ao alterar volume desktop:', error);
     }
   };
 
@@ -301,14 +180,71 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
       className="relative bg-black text-gray-100 pt-16"
     >
       <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
-        {/* Imagem no topo */}
-        {/* Título movido para cima da imagem */}
+        {/* Título principal */}
         <div className="text-center mb-4">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-100">
             Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
+        </div>
+
+        {/* Vídeo principal entre título e botão */}
+        {showVideo && !videoError && (
+          <div className="text-center mb-6">
+            <div className="relative max-w-4xl mx-auto">
+              <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700">
+                <video
+                  ref={videoRef}
+                  className="w-full h-full object-cover cursor-pointer"
+                  autoPlay
+                  muted
+                  loop
+                  playsInline
+                  preload="metadata"
+                  onContextMenu={(e) => e.preventDefault()}
+                  onClick={handleVideoClick}
+                  src="https://zzktwtxeeikhdycduxor.supabase.co/storage/v1/object/public/pbii/video_2025-08-12_19-47-32.mp4"
+                >
+                  <style>
+                    {`
+                      video::-webkit-media-controls-overflow-menu-button,
+                      video::-webkit-media-controls-overflow-menu-list,
+                      video::-webkit-media-controls-download-button {
+                        display: none !important;
+                      }
+                      video::-webkit-media-controls-enclosure {
+                        overflow: hidden !important;
+                      }
+                      video::-webkit-media-controls-panel {
+                        overflow: clip !important;
+                      }
+                    `}
+                  </style>
+                  Seu navegador não suporta a reprodução de vídeos.
+                </video>
+
+                {/* Overlay com ícone de áudio quando mutado */}
+                {(showAudioIcon || isMuted) && (
+                  <div 
+                    className="absolute inset-0 bg-black/30 flex items-center justify-center cursor-pointer"
+                    onClick={handleVideoClick}
+                  >
+                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-6 shadow-2xl transform hover:scale-110 transition-transform">
+                      <div className="text-center">
+                        <VolumeX className="h-8 w-8 text-gray-800 mx-auto mb-2" />
+                        <p className="text-gray-800 font-bold text-sm">Seu vídeo já começou</p>
+                        <p className="text-gray-600 text-xs">Aperte para ouvir</p>
+                      </div>
+                    </div>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        )}
+
+        {/* Botões */}
+        <div className="text-center mb-4">
           
-          {/* Botão "Sim! eu quero" */}
           <div className="mt-6">
             <button
               onClick={onRedirect}
@@ -316,21 +252,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
             >
               Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
             </button>
-            
-            {/* Botão "Indique e Ganhe" */}
-            <div className="mt-4">
-              <button
-                onClick={() => {
-                  const pbiSection = document.getElementById('pbi-section');
-                  if (pbiSection) {
-                    pbiSection.scrollIntoView({ behavior: 'smooth' });
-                  }
-                }}
-                className="inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
-              >
-                Indique e Ganhe <ArrowRight className="ml-2 h-6 w-6" />
-              </button>
-            </div>
           </div>
           
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
