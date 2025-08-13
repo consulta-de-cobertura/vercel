@@ -179,9 +179,9 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
       ref={sectionRef}
       className="relative bg-black text-gray-100 pt-16"
     >
-      <div className="container mx-auto px-4 pt-2 pb-4 md:pt-4 md:pb-8">
+      <div className="container mx-auto px-4 pt-2 pb-2 md:pt-4 md:pb-8">
         {/* Título principal */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-2 md:mb-4">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-100">
             Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
@@ -189,7 +189,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Vídeo principal entre título e botão */}
         {showVideo && !videoError && (
-          <div className="text-center mb-6">
+          <div className="text-center mb-3 md:mb-6">
             <div className="relative max-w-4xl mx-auto">
               <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700">
                 <video
@@ -243,10 +243,10 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         )}
 
         {/* Botões */}
-        <div className="text-center mb-4">
+        <div className="text-center mb-2 md:mb-4">
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
-          <div className="mt-6 md:hidden">
-            <div className="p-6">
+          <div className="mt-2 md:hidden">
+            <div className="p-4">
               <h3 className="text-xl font-bold mb-4 text-gray-100">Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
@@ -293,7 +293,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
 
         {/* Nova seção entre imagem e vídeo */}
-        <div className="text-center mb-6 md:mb-8 mt-6 md:mt-8">
+        <div className="text-center mb-3 md:mb-8 mt-3 md:mt-8">
           <div className="max-w-4xl mx-auto">
             <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
               Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
@@ -312,7 +312,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
           <div className="w-full">
             <div className="flex flex-col sm:flex-row gap-4 mb-2 justify-center md:justify-start">
-              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-xl py-4 px-8 bg-green-600 hover:bg-green-700">
+              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-lg md:text-xl py-3 md:py-4 px-6 md:px-8 bg-green-600 hover:bg-green-700">
                 Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
               </Button>
             </div>
