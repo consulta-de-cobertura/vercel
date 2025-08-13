@@ -189,7 +189,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Vídeo principal entre título e botão */}
         {showVideo && !videoError && (
-          <div className="text-center mb-2 md:mb-6">
+          <div className="text-center mb-2 md:mb-4">
             <div className="relative max-w-4xl mx-auto">
               <div className="relative aspect-video bg-gray-900 rounded-2xl overflow-hidden shadow-2xl border-4 border-gray-700">
                 <video
@@ -293,7 +293,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
 
         {/* Nova seção entre imagem e vídeo */}
-        <div className="text-center mb-2 md:mb-8 mt-2 md:mt-8">
+        <div className="text-center mb-2 md:mb-4 mt-2 md:mt-4">
           <div className="max-w-4xl mx-auto">
             <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
               Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
