@@ -228,11 +228,11 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                     className="absolute inset-0 bg-black/30 flex items-center justify-center cursor-pointer"
                     onClick={handleVideoClick}
                   >
-                    <div className="bg-white/90 backdrop-blur-sm rounded-full p-6 shadow-2xl transform hover:scale-110 transition-transform">
+                    <div className="bg-green-500/90 backdrop-blur-sm rounded-full p-3 shadow-2xl transform hover:scale-110 transition-transform">
                       <div className="text-center">
-                        <VolumeX className="h-8 w-8 text-gray-800 mx-auto mb-2" />
-                        <p className="text-gray-800 font-bold text-sm">Seu vídeo já começou</p>
-                        <p className="text-gray-600 text-xs">Aperte para ouvir</p>
+                        <VolumeX className="h-4 w-4 text-white mx-auto mb-1" />
+                        <p className="text-white font-bold text-xs">Seu vídeo já começou</p>
+                        <p className="text-white/80 text-xs">Aperte para ouvir</p>
                       </div>
                     </div>
                   </div>
