@@ -247,7 +247,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-1 md:hidden">
             <div className="p-3">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Aqui na Federal Associados você conta com</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra como ter internet de graça e ainda transformar sua internet em uma fonte de renda recorrente. Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -322,7 +322,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
             <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Aqui na Federal Associados você conta com</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra como ter internet de graça e ainda transformar sua internet em uma fonte de renda recorrente. Aqui na Federal Associados você conta com</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
