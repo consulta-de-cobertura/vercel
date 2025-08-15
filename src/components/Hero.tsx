@@ -307,32 +307,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         </div>
 
 
-        {/* Nova seção entre imagem e vídeo */}
-        <div className="text-center mb-2 md:mb-4 mt-2 md:mt-4">
-          <div className="max-w-4xl mx-auto">
-            <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
-              Se você chegou até aqui, provavelmente você está passando ou já passou por essa frustração de ver sua internet 
-              "acabar" no meio do mês. Segundo pesquisas recentes, <span className="text-red-600 font-bold">86% dos brasileiros afirmam que sua internet não 
-              dura o mês todo</span>. Isso não é coincidência - é um problema sistêmico que as operadoras tradicionais criaram 
-              para lucrar mais.
-            </p>
-            <p className="text-base md:text-lg text-gray-300 mb-4 leading-relaxed">
-              Mas e se eu te dissesse que existe uma solução que já está transformando a vida de mais de <span className="text-gray-100 font-bold">100.000 pessoas 
-              no Brasil</span>? Uma alternativa que oferece internet verdadeiramente ilimitada, sem pegadinhas, por um preço 
-              justo? Descubra agora mesmo como mais de 100.000 brasileiros já estão economizando todo mês. Com internet ILIMITADA de verdade
-            </p>
-          </div>
-        </div>
-
         <div className="grid md:grid-cols-2 gap-6 md:gap-12 items-center">
-          <div className="w-full">
-            <div className="flex flex-col sm:flex-row gap-4 mb-1 justify-center md:justify-start">
-              <Button onClick={onRedirect} variant="secondary" size="lg" className="sm:w-auto w-full button-glow text-lg md:text-xl py-3 md:py-4 px-6 md:px-8 bg-green-600 hover:bg-green-700">
-                Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
-              </Button>
-            </div>
-          </div>
-          
           {/* COLUNA DIREITA - DESKTOP ONLY */}
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
