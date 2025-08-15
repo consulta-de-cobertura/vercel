@@ -299,7 +299,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                   onClick={onRedirect}
                   className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
                 >
-                  Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
+                  Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
                 </button>
               </div>
             </div>
@@ -364,7 +364,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                   onClick={onRedirect}
                   className="w-full inline-flex items-center justify-center rounded-lg font-medium transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 animate-subtle-pulse hover:scale-105 bg-green-600 hover:bg-green-700 text-white focus:ring-green-600 shadow-lg text-base py-3 px-6 button-glow"
                 >
-                  Sim, eu quero <ArrowRight className="ml-2 h-6 w-6" />
+                  Quero internet ilimitada <ArrowRight className="ml-2 h-6 w-6" />
                 </button>
               </div>
             </div>
