@@ -244,21 +244,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
 
         {/* Botões */}
         <div className="text-center mb-1 md:mb-4">
-          {/* Imagem e legenda acima do botão */}
-          <div className="mb-4 md:mb-6">
-            <div className="max-w-md mx-auto mb-3">
-              <img
-                src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/imagem/federalassociadosimg2alt.webp"
-                alt="Federal Associados - Internet ilimitada"
-                className="w-full h-auto rounded-lg shadow-lg"
-                loading="lazy"
-              />
-            </div>
-            <p className="text-base md:text-lg text-gray-300 max-w-2xl mx-auto leading-relaxed">
-              Navegue o mês inteiro sem preocupações! Ao se associar, você recebe um chip com benefícios exclusivos que só os nossos associados têm.
-            </p>
-          </div>
-
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-1 md:hidden">
             <div className="p-3">
@@ -294,6 +279,21 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
               </ul>
               
+              {/* Imagem e legenda após benefícios - MOBILE */}
+              <div className="mb-4">
+                <div className="max-w-md mx-auto mb-3">
+                  <img
+                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/imagem/federalassociadosimg2alt.webp"
+                    alt="Federal Associados - Internet ilimitada"
+                    className="w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-base text-gray-300 leading-relaxed text-center">
+                  Navegue o mês inteiro sem preocupações! Ao se associar, você recebe um chip com benefícios exclusivos que só os nossos associados têm.
+                </p>
+              </div>
+
               <div className="mt-4">
                 <button
                   onClick={onRedirect}
@@ -335,21 +335,6 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           
           {/* COLUNA DIREITA - DESKTOP ONLY */}
           <div className="relative hidden md:block">
-            {/* Imagem e legenda - DESKTOP */}
-            <div className="mb-6 text-center">
-              <div className="max-w-md mx-auto mb-3">
-                <img
-                  src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/imagem/federalassociadosimg2alt.webp"
-                  alt="Federal Associados - Internet ilimitada"
-                  className="w-full h-auto rounded-lg shadow-lg"
-                  loading="lazy"
-                />
-              </div>
-              <p className="text-base md:text-lg text-gray-300 leading-relaxed">
-                Navegue o mês inteiro sem preocupações! Ao se associar, você recebe um chip com benefícios exclusivos que só os nossos associados têm.
-              </p>
-            </div>
-
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
             <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
               <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente. Aqui na Federal Associados você tem</h3>
@@ -384,6 +369,21 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
                 </li>
               </ul>
               
+              {/* Imagem e legenda após benefícios - DESKTOP */}
+              <div className="mt-6 mb-6 text-center">
+                <div className="max-w-md mx-auto mb-3">
+                  <img
+                    src="https://qkbeuebapuqnlpjgcvxb.supabase.co/storage/v1/object/public/imagem/federalassociadosimg2alt.webp"
+                    alt="Federal Associados - Internet ilimitada"
+                    className="w-full h-auto rounded-lg shadow-lg"
+                    loading="lazy"
+                  />
+                </div>
+                <p className="text-base md:text-lg text-gray-300 leading-relaxed">
+                  Navegue o mês inteiro sem preocupações! Ao se associar, você recebe um chip com benefícios exclusivos que só os nossos associados têm.
+                </p>
+              </div>
+
               <div className="mt-6">
                 <button
                   onClick={onRedirect}
