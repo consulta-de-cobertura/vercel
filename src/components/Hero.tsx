@@ -183,7 +183,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         {/* Título principal */}
         <div className="text-center mb-2 md:mb-4">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-100">
-            Sua internet não dura o mês todo? <span className="text-red-400 font-extrabold bg-red-900/30 px-2 py-1 rounded">86% dos brasileiros dizem que não.</span> Você gostaria de ter <span className="text-yellow-400 font-extrabold bg-yellow-900/30 px-2 py-1 rounded">internet ilimitada de verdade 4G/5G</span> para navegar o mês inteiro <span className=\"block sm:inline text-green-400 font-extrabold">sem preocupações?</span>
+            Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro <span className="block sm:inline">sem preocupações?</span>
           </h1>
         </div>
 
@@ -247,9 +247,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-1 md:hidden">
             <div className="p-3">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">
-                Descubra agora como mais de <span className="text-yellow-400 font-extrabold bg-yellow-900/30 px-2 py-1 rounded">100.000 brasileiros</span> estão usando <span className="text-green-400 font-extrabold bg-green-900/30 px-2 py-1 rounded">internet de graça</span> e transformando sua conexão em uma <span className=\"text-blue-400 font-extrabold bg-blue-900/30 px-2 py-1 rounded">fonte de renda extra recorrente</span>. Aqui na Federal Associados você tem
-              </h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente. Aqui na Federal Associados você tem</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
@@ -324,9 +322,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
             <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">
-                Descubra agora como mais de <span className="text-yellow-400 font-extrabold bg-yellow-900/30 px-2 py-1 rounded">100.000 brasileiros</span> estão usando <span className="text-green-400 font-extrabold bg-green-900/30 px-2 py-1 rounded">internet de graça</span> e transformando sua conexão em uma <span className=\"text-blue-400 font-extrabold bg-blue-900/30 px-2 py-1 rounded">fonte de renda extra recorrente</span>. Aqui na Federal Associados você tem
-              </h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente. Aqui na Federal Associados você tem</h3>
               <ul className="space-y-3">
                 <li className="flex items-start">
                   <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
