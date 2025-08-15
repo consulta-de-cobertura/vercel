@@ -29,7 +29,7 @@ const CadastroModal: React.FC<CadastroModalProps> = ({ isOpen, onClose }) => {
       operator: "Vivo",
       icon: <Zap className="h-6 w-6 text-yellow-500" />,
       title: "Ativação Imediata",
-      description: "Ao escolher um plano da Vivo, você pode simplesmente comprar um chip lacrado em qualquer farmácia, loja, banca de jornal e solicitar ativação de forma imediata.",
+      description: "Ao escolher um plano da Vivo 80GB com ligação acima, você pode simplesmente comprar um chip lacrado em qualquer farmácia, loja, banca de jornal e solicitar ativação de forma imediata.",
       highlight: true
     },
     {
