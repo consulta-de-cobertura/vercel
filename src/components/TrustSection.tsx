@@ -6,29 +6,6 @@ interface TrustSectionProps {
 }
 
 const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
-  const trustIndicators = [
-    {
-      icon: <Clock className="h-8 w-8 text-blue-500" />,
-      title: "14+ Anos no Mercado",
-      description: "Mais de uma década oferecendo soluções de conectividade com excelência e confiabilidade."
-    },
-    {
-      icon: <Users className="h-8 w-8 text-green-500" />,
-      title: "100.000+ Associados",
-      description: "Uma comunidade gigante de pessoas satisfeitas que confiam em nossos serviços."
-    },
-    {
-      icon: <Building className="h-8 w-8 text-purple-500" />,
-      title: "5+ Escritórios Físicos",
-      description: "Presença real em todo o Brasil com estrutura sólida e atendimento presencial."
-    },
-    {
-      icon: <Award className="h-8 w-8 text-orange-500" />,
-      title: "5 Troféus de Excelência",
-      description: "Reconhecida como a melhor associação do setor por órgãos especializados."
-    }
-  ];
-
   const securityFeatures = [
     "CNPJ: 29.383.343/0001-64 - Empresa regularizada",
     "Sede própria com endereço físico verificável",
@@ -132,22 +109,6 @@ const TrustSection: React.FC<TrustSectionProps> = ({ onRedirect }) => {
               <div className="absolute -bottom-4 -right-4 w-32 h-32 bg-blue-500/10 rounded-full blur-xl"></div>
             </div>
           </div>
-        </div>
-
-        {/* Trust Indicators */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-8 md:mb-16">
-          {trustIndicators.map((indicator, index) => (
-            <div 
-              key={index}
-              className="bg-gray-700 rounded-xl p-4 md:p-6 text-center shadow-lg border border-gray-600 hover:shadow-xl transition-shadow duration-300"
-            >
-              <div className="bg-gray-100 w-16 h-16 rounded-full flex items-center justify-center mx-auto mb-3 md:mb-4">
-                {indicator.icon}
-              </div>
-              <h3 className="text-base md:text-lg font-bold mb-2 text-gray-100">{indicator.title}</h3>
-              <p className="text-gray-400 text-xs md:text-sm">{indicator.description}</p>
-            </div>
-          ))}
         </div>
 
         {/* Security Features */}
