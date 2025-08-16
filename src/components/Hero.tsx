@@ -247,7 +247,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-1 md:hidden">
             <div className="p-3">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente.</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Agora me diz: pra que serve um celular sem internet? Se hoje em dia, nossa vida inteira está praticamente toda no celular. Sem Internet ele simplesmente não serve pra nada. Descubra agora como mais de 100.000 brasileiros já estão usando internet de graça e ainda transformando sua conexão em uma fonte de renda extra recorrente.</h3>
               
               {/* Imagem e legenda após benefícios - MOBILE */}
               <div className="mb-4">
@@ -282,7 +282,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
             <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente.</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Agora me diz: pra que serve um celular sem internet? Se hoje em dia, nossa vida inteira está praticamente toda no celular. Sem Internet ele simplesmente não serve pra nada. Descubra agora como mais de 100.000 brasileiros já estão usando internet de graça e ainda transformando sua conexão em uma fonte de renda extra recorrente.</h3>
               
               {/* Imagem e legenda após benefícios - DESKTOP */}
               <div className="mt-6 mb-6 text-center">
