@@ -35,33 +35,35 @@ function App() {
         {/* 2. BENEFITS - Apresenta a solução imediatamente */}
         <Benefits onRedirect={handleDirectRedirect} />
         
-        {/* 3. DIFFERENTIALS - Explica por que escolher vocês */}
+        {/* 3. ABOUT - Dá contexto sobre a empresa, cria proximidade e humaniza */}
+        <About />
+        
+        {/* 4. DIFFERENTIALS - Mostra o porquê somos diferentes dos concorrentes */}
         <Differentials onRedirect={handleDirectRedirect} />
         
-        {/* 4. ABOUT + TRUST - Constrói credibilidade (juntos para maior impacto) */}
-        <About />
+        {/* 5. TRUST - Elimina as últimas objeções e prepara o terreno para o CTA final */}
         <TrustSection onRedirect={handleDirectRedirect} />
         
-        {/* 5. TESTIMONIALS + WRITTEN - Prova social concentrada (mais impacto) */}
+        {/* 6. TESTIMONIALS + WRITTEN - Prova social concentrada (mais impacto) */}
         <Testimonials />
         <WrittenTestimonials onRedirect={handleDirectRedirect} />
         
-        {/* 6. MEMBERSHIP BENEFITS - Valor agregado (sweeteners) */}
+        {/* 7. MEMBERSHIP BENEFITS - Valor agregado (sweeteners) */}
         <MembershipBenefits onRedirect={handleDirectRedirect} />
         
-        {/* 7. OBJECTIONS - Remove barreiras finais */}
+        {/* 8. OBJECTIONS - Remove barreiras finais */}
         <ObjectionsSection onRedirect={handleDirectRedirect} />
         
-        {/* 8. PLANS - Momento da oferta (quando já estão convencidos) */}
+        {/* 9. PLANS - Momento da oferta (quando já estão convencidos) */}
         <Plans onRedirect={handleDirectRedirect} />
         
-        {/* 8.5. PBI SECTION - Programa de Indicação para transformar internet em renda */}
+        {/* 9.5. PBI SECTION - Programa de Indicação para transformar internet em renda */}
         <PBISection onRedirect={handleDirectRedirect} />
         
-        {/* 9. FAQ - Últimas dúvidas antes da conversão */}
+        {/* 10. FAQ - Últimas dúvidas antes da conversão */}
         <FAQ />
         
-        {/* 10. FOOTER - Fechamento */}
+        {/* 11. FOOTER - Fechamento */}
         <Footer />
         
         {/* Exit Intent Popup */}
