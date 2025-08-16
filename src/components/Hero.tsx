@@ -183,7 +183,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
         {/* Título principal */}
         <div className="text-center mb-2 md:mb-4">
           <h1 className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-black leading-tight animate-pulse-attention text-gray-100">
-            Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro sem preocupações?
+            Sua internet não dura o mês todo? <span className="text-gray-100 font-extrabold">86% dos brasileiros dizem que não.</span> Agora me diz: pra que serve um celular sem internet? Se hoje em dia, nossa vida inteira está praticamente toda no celular. Sem Internet ele simplesmente não serve pra nada.
           </h1>
         </div>
 
@@ -247,7 +247,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-1 md:hidden">
             <div className="p-3">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Agora me diz: pra que serve um celular sem internet? Se hoje em dia, nossa vida inteira está praticamente toda no celular. Sem Internet ele simplesmente não serve pra nada. Descubra agora como mais de 100.000 brasileiros já estão usando internet de graça e ainda transformando sua conexão em uma fonte de renda extra recorrente.</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro sem preocupações Descubra agora como mais de 100.000 brasileiros já estão usando internet de graça e ainda transformando sua conexão em uma fonte de renda extra recorrente.</h3>
               
               {/* Imagem e legenda após benefícios - MOBILE */}
               <div className="mb-4">
@@ -282,7 +282,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
             <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Agora me diz: pra que serve um celular sem internet? Se hoje em dia, nossa vida inteira está praticamente toda no celular. Sem Internet ele simplesmente não serve pra nada. Descubra agora como mais de 100.000 brasileiros já estão usando internet de graça e ainda transformando sua conexão em uma fonte de renda extra recorrente.</h3>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Você gostaria de ter internet ilimitada de verdade 4G/5G para navegar o mês inteiro sem preocupações Descubra agora como mais de 100.000 brasileiros já estão usando internet de graça e ainda transformando sua conexão em uma fonte de renda extra recorrente.</h3>
               
               {/* Imagem e legenda após benefícios - DESKTOP */}
               <div className="mt-6 mb-6 text-center">
