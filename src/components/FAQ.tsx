@@ -45,6 +45,30 @@ const FAQ = () => {
     {
       question: "Como funciona o suporte 24h?",
       answer: "Temos uma central de atendimento via WhatsApp disponível 24 horas por dia, 7 dias por semana. Nossos atendentes estão sempre prontos para resolver qualquer dúvida ou problema com seu plano."
+    },
+    {
+      question: "E se não funcionar na minha região?",
+      answer: "Trabalhamos com as 3 maiores operadoras do Brasil (Vivo, Tim e Claro). Nossa cobertura alcança 99,8% do território nacional. Se por algum motivo não funcionar na sua região, você tem 7 dias de garantia total para cancelar e receber 100% do seu dinheiro de volta."
+    },
+    {
+      question: "Como sei que não é golpe?",
+      answer: "Somos uma empresa com mais de 14 anos no mercado, CNPJ ativo, sede física própria, mais de 5 escritórios pelo Brasil e 100.000+ associados satisfeitos. Você pode verificar nossa empresa no site da Receita Federal e temos garantia de 7 dias para devolução total do valor."
+    },
+    {
+      question: "Posso usar em qualquer aparelho?",
+      answer: "Sim! Nosso chip funciona em qualquer celular desbloqueado, tablets, modems móveis e roteadores 4G/5G. Compatível com Android, iPhone e todos os dispositivos que aceitem chip de operadora."
+    },
+    {
+      question: "Quanto tempo demora para ativar?",
+      answer: "Para planos Vivo: ativação imediata (você compra um chip lacrado e solicitamos a ativação na hora). Para Tim e Claro: enviamos seu chip em até 24h e você recebe em 5-10 dias úteis com código de rastreio."
+    },
+    {
+      question: "Posso cancelar quando quiser mesmo?",
+      answer: "Absolutamente! Não temos fidelidade nem multas. Você pode cancelar a qualquer momento sem pagar nada extra. Somos transparentes: sua liberdade é garantida por contrato."
+    },
+    {
+      question: "E se eu não souber usar ou configurar?",
+      answer: "Nosso suporte 24h te ajuda em tudo! Desde a configuração inicial até qualquer dúvida que surgir. Temos tutoriais em vídeo e atendimento personalizado via WhatsApp para garantir que você use seu plano sem problemas."
     }
   ];
 
