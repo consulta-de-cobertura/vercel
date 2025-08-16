@@ -247,37 +247,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           {/* CARD DE BENEFÍCIOS - MOBILE ONLY */}
           <div className="mt-1 md:hidden">
             <div className="p-3">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente. Aqui na Federal Associados você tem</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet ilimitada 4G/5G</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Ligações ilimitadas</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet grátis todo mês com o PBI</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Contratação sem consulta ao SPC/SERASA</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet sem fidelidade</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet o mês todo, sem surpresas</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Renda extra recorrente</span>
-                </li>
-              </ul>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente.</h3>
               
               {/* Imagem e legenda após benefícios - MOBILE */}
               <div className="mb-4">
@@ -312,37 +282,7 @@ const Hero: React.FC<HeroProps> = ({ onRedirect }) => {
           <div className="relative hidden md:block">
             {/* CARD DE BENEFÍCIOS - DESKTOP */}
             <div className="p-6 transform rotate-3 hover:rotate-0 transition-transform duration-500">
-              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente. Aqui na Federal Associados você tem</h3>
-              <ul className="space-y-3">
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet ilimitada 4G/5G</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Ligações ilimitadas</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet grátis todo mês com o PBI</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Contratação sem consulta ao SPC/SERASA</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet sem fidelidade</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Internet o mês todo, sem surpresas</span>
-                </li>
-                <li className="flex items-start">
-                  <span className="text-green-400 mr-3 mt-1 text-lg">✅</span>
-                  <span className="text-gray-300">Renda extra recorrente</span>
-                </li>
-              </ul>
+              <h3 className="text-xl font-bold mb-4 text-gray-100">Descubra agora como mais de 100.000 brasileiros estão usando internet de graça e transformando sua conexão em uma fonte de renda extra recorrente.</h3>
               
               {/* Imagem e legenda após benefícios - DESKTOP */}
               <div className="mt-6 mb-6 text-center">
